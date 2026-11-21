@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>พุทธศาสตร์ — ศาสตร์ทั้งสี่ของลุงหงอก</title>
+<link rel="preload" as="image" href="../website_assets/images/bud_bg1_hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Serif+Thai:wght@300;400&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═════ เทมเพลต "Know it all" · พื้นดำ · Instrument Serif · Liquid glass ═════ */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--serif:'Instrument Serif','Noto Serif Thai',Georgia,serif;--sans:ui-sans-serif,-apple-system,'Segoe UI','Noto Sans Thai',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#000;color:#fff;font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none} button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+body.lang-th .en,body.lang-en .th{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.serif{font-family:var(--serif);font-weight:400}
+.serif em{font-style:italic;color:rgba(255,255,255,.6)}
+body.lang-th .serif em{font-style:normal;font-weight:300;color:rgba(255,255,255,.6)}
+.wrap{max-width:72rem;margin:0 auto}
+
+/* liquid glass (as given in the template prompt) */
+.lg{background:rgba(255,255,255,.01);background-blend-mode:luminosity;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:none;box-shadow:inset 0 1px 1px rgba(255,255,255,.1);position:relative;overflow:hidden}
+.lg::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+  background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.hero{background:#000 var(--poster,none) center bottom/cover no-repeat}
+.hero-v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:bottom;opacity:1}
+.nav{position:relative;z-index:20;padding:24px}
+.nav-pill{max-width:64rem;margin:0 auto;padding:12px 24px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-l{display:flex;align-items:center}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
+.nav-links{display:flex;gap:28px;margin-left:32px}
+.nav-links a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.8);transition:color .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.on{color:#fff}
+.nav-r{display:flex;align-items:center;gap:14px}
+.lang{display:flex;gap:2px;font-size:.875rem;font-weight:500}
+.lang button{padding:4px 6px;color:rgba(255,255,255,.5);transition:color .2s} .lang button.on,.lang button:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 24px;font-size:.875rem;font-weight:500;white-space:nowrap;transition:background-color .25s,transform .25s}
+.btn:hover{background-color:rgba(255,255,255,.05)}
+.hero-c{position:relative;z-index:10;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:48px 24px;text-align:center;transform:translateY(-20%)}
+.hero h1{font-size:clamp(4.5rem,11vw,8rem);line-height:1;letter-spacing:-.025em;white-space:nowrap}
+body.lang-th .hero h1{font-size:clamp(3.8rem,9vw,7rem);line-height:1.25;letter-spacing:0}
+.ask{width:100%;max-width:36rem;border-radius:999px;padding:8px 8px 8px 24px;display:flex;align-items:center;gap:12px;text-align:left}
+.ask span.q{flex:1;min-width:0;font-size:1rem;color:rgba(255,255,255,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ask .go{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;transition:transform .25s}
+.ask:hover .go{transform:translateX(3px)}
+.hero-sub{max-width:34rem;font-size:.875rem;line-height:1.7;padding:0 16px;color:#fff}
+.hero-c .btn{padding:12px 32px}
+.socials{position:relative;z-index:10;display:flex;justify-content:center;gap:16px;padding-bottom:48px}
+.kia-soc{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:rgba(255,255,255,.8);transition:color .25s,background-color .25s}
+.kia-soc:hover,.kia-soc.on{color:#fff;background-color:rgba(255,255,255,.08)}
+.kia-soc svg,.kia-four .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.kia-soc svg .f,.kia-four .ic svg .f{fill:currentColor}
+
+/* ── reveal (framer-motion in the template → IntersectionObserver here) ── */
+.rv{opacity:0;transform:translate(var(--rx,0),var(--ry,40px));transition:opacity var(--d,.8s) var(--ease),transform var(--d,.8s) var(--ease);transition-delay:var(--dl,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ── ABOUT ── */
+.about{position:relative;padding:176px 24px 56px;overflow:hidden;background:#000}
+.about::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(255,255,255,.03) 0%,transparent 70%);pointer-events:none}
+.label{font-size:.875rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px}
+.label.xs{font-size:.75rem;margin-bottom:12px}
+.about h2{font-size:clamp(2.25rem,5.6vw,4.5rem);line-height:1.1;letter-spacing:-.02em;max-width:62rem}
+body.lang-th .about h2{line-height:1.35;letter-spacing:0}
+.about p.body{margin-top:32px;max-width:44rem;font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.9;color:rgba(255,255,255,.7)}
+
+/* ── FEATURED VIDEO ── */
+.feat{padding:24px 24px 128px;background:#000;overflow:hidden}
+.feat-box{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/9}
+.feat-box video,.phil-v video,.card-v video{width:100%;height:100%;object-fit:cover;display:block}
+.feat-box::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%);pointer-events:none}
+.feat-ov{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:40px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.feat-card{max-width:30rem;border-radius:16px;padding:32px}
+.feat-card p{font-size:1rem;line-height:1.75}
+.feat-card strong{font-weight:500}
+.btn.lgb{padding:12px 32px} .btn.lgb:hover{transform:scale(1.05)} .btn.lgb:active{transform:scale(.95)}
+
+/* ── PHILOSOPHY ── */
+.phil{padding:160px 24px;background:#000;overflow:hidden}
+.phil h2{font-size:clamp(3rem,7.5vw,6rem);letter-spacing:-.025em;line-height:1.05;margin-bottom:96px}
+body.lang-th .phil h2{line-height:1.3;letter-spacing:0}
+.phil h2 em{color:rgba(255,255,255,.4)!important}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.phil-v{border-radius:24px;overflow:hidden;aspect-ratio:4/3}
+.phil-t .blk p{font-size:clamp(1rem,1.3vw,1.125rem);line-height:1.85;color:rgba(255,255,255,.7)}
+.phil-t .blk strong{color:#fff;font-weight:500}
+.phil-t hr{border:0;height:1px;background:rgba(255,255,255,.1);margin:36px 0}
+
+/* ── SERVICES ── */
+.serv{position:relative;padding:160px 24px;background:#000;overflow:hidden}
+.serv::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.02) 0%,transparent 60%);pointer-events:none}
+.serv-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:56px}
+.serv-h h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.02em;line-height:1.2}
+.serv-h > span{font-size:.875rem;color:rgba(255,255,255,.4)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.card{border-radius:24px}
+.card-v{position:relative;aspect-ratio:16/9;overflow:hidden}
+.card-v video{transition:transform .7s var(--ease)} .card:hover .card-v video{transform:scale(1.05)}
+.card-v::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4),transparent);pointer-events:none}
+.card-b{padding:32px}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.card-top .label{margin:0}
+.card-top .ar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center}
+.card h3{font-size:clamp(1.25rem,1.9vw,1.6rem);letter-spacing:-.01em;line-height:1.35;margin-bottom:12px;font-weight:400}
+.card p.d{font-size:.875rem;line-height:1.7;color:rgba(255,255,255,.5)}
+.steps{list-style:none;position:relative;margin-top:4px}
+.steps::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:1px;background:linear-gradient(to bottom,rgba(255,255,255,.1),rgba(255,255,255,.8))}
+.steps li{position:relative;display:flex;align-items:center;gap:16px;padding:7px 0;font-size:.95rem;color:rgba(255,255,255,calc(.45 + var(--k)*.13))}
+.steps li small{display:block;font-size:.75rem;color:rgba(255,255,255,.4)}
+.steps li>i{flex:none;position:relative;z-index:1;width:17px;height:17px;border-radius:50%;background:#000;border:1px solid rgba(255,255,255,calc(.25 + var(--k)*.18));box-shadow:0 0 calc(2px + var(--k)*7px) rgba(255,255,255,calc(.1 + var(--k)*.15))}
+.steps li>i::after{content:'';position:absolute;inset:4px;border-radius:50%;background:#fff;opacity:calc(.1 + var(--k)*.22)}
+.steps li:last-child{color:#fff}
+
+/* ── closing: the four sciences ── */
+.close{padding:40px 24px 120px;background:#000;text-align:center}
+.close h2{font-size:clamp(1.9rem,4vw,3.25rem);line-height:1.3;max-width:52rem;margin:0 auto 48px}
+.fours{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:64rem;margin:0 auto 40px;text-align:left}
+.kia-four{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:20px;color:rgba(255,255,255,.8);transition:background-color .25s,color .25s}
+.kia-four:hover{background-color:rgba(255,255,255,.05);color:#fff}
+.kia-four.on{background:#fff;color:#000} .kia-four.on::before{display:none}
+.kia-four .ic{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;opacity:.85}
+.kia-four b{display:block;font-weight:500;font-size:.95rem;line-height:1.3} .kia-four small{display:block;font-size:.72rem;opacity:.6}
+.next{display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 28px;border-radius:999px;font-size:.95rem;font-weight:500}
+.next .go{width:40px;height:40px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center}
+
+@media (max-width:767px){
+  .nav{padding:16px} .nav-pill{padding:10px 12px 10px 18px} .nav-links{display:none}
+  .nav-r .btn{padding:7px 14px}
+  .hero-c{transform:translateY(-8%)}
+  .about{padding:128px 20px 40px} .feat{padding:16px 16px 80px} .phil,.serv{padding:112px 20px}
+  .feat-box{aspect-ratio:auto;display:flex;flex-direction:column;background:#0b0b0b}
+  .feat-box video{aspect-ratio:16/9;height:auto} .feat-box::after{display:none}
+  .feat-ov{position:relative;flex-direction:column;align-items:stretch;padding:16px}
+  .feat-card{padding:24px}
+  .phil h2{margin-bottom:64px} .grid2,.cards{grid-template-columns:1fr;gap:28px}
+  .serv-h > span{display:none} .card-b{padding:24px}
+  .fours{grid-template-columns:1fr 1fr}
+}
+@media (max-width:420px){ .fours{grid-template-columns:1fr} .nav-r .btn .th,.nav-r .btn .en{display:none!important} }
+@media (max-height:820px) and (min-width:768px){.hero-c{transform:translateY(-8%);gap:22px}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ── พุทธศาสตร์ ── */
+/* the Buddha statue fills the upper half of the hero: the title sits low, over the misty ground, so nothing covers the statue */
+.bud-hero::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 26%),linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,0) 18%)}
+/* the mist Buddha sits in the middle of the clip: the clip is shown a little smaller and centred, its edges melt into a blurred copy
+   of the same night sky, so the title (left) and the glass card (right) never cover the statue */
+.bud-back{position:absolute;inset:-40px;z-index:0;background:#04060c var(--poster) center/cover no-repeat;filter:blur(28px) brightness(.55) saturate(1.1);pointer-events:none}
+.bud-hero .hero-v{inset:auto;left:50%;top:52%;width:min(80%,calc(76svh * 16 / 9));height:auto;aspect-ratio:16/9;transform:translate(-50%,-50%);object-fit:cover;object-position:50% 50%;z-index:1;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 10%,#000 86%,transparent);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,transparent,#000 10%,#000 86%,transparent);mask-composite:intersect}
+.hero.tnh.bud-hero h1{font-size:clamp(2.8rem,4.6vw,5.4rem)!important}
+@media (max-width:1300px) and (min-width:901px){.hero.tnh.bud-hero .hero-c{width:min(420px,calc(50vw - 150px))}.hero.tnh.bud-hero h1{font-size:clamp(2.6rem,4.2vw,4rem)!important}}
+/* phones: the statue sits in the lower part of the hero, behind the (clear) card; the title stays over open night sky */
+@media (max-width:900px){.bud-hero .hero-v{left:0;top:var(--bud-vt,auto);bottom:var(--bud-vb,0);width:100%;height:var(--bud-vh,62%);aspect-ratio:auto;transform:none;object-position:50% 40%;
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 92%,transparent)}}
+/* stills breathe slowly (Ken Burns) so the page keeps the template's motion */
+.hero .kb{transform-origin:50% 70%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08) translateY(-1.5%)}}
+.phil-v img,.card-v img{width:100%;height:100%;object-fit:cover;display:block}
+.phil-v img.kb-s{animation:kb 30s ease-in-out infinite alternate;transform-origin:50% 60%}
+.card-v img{transition:transform .7s var(--ease)} .card:hover .card-v img{transform:scale(1.05)}
+.hero .motes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+/* phones: the Buddha's face sits in the open gap between the "start reading" button and the glass card (never under the card) */
+@media (max-width:900px){.bud-hero{--bud-vt:380px;--bud-vb:auto;--bud-vh:600px}.bud-hero .tn-card{margin-top:150px!important}}
+@media (prefers-reduced-motion:reduce){.hero .kb,.phil-v img.kb-s{animation:none}.hero .motes{display:none}}
+/* night-sky placeholder in every footage slot until the clip is saved */
+.hero,.feat-box,.phil-v,.card-v{background-color:#04060c;background-image:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(233,190,120,.16),transparent 70%),radial-gradient(ellipse 60% 50% at 20% 0%,rgba(120,150,220,.14),transparent 70%),var(--poster,none);background-size:cover;background-position:center bottom}
+.about{padding-bottom:40px} .feat{padding-bottom:56px} .phil{padding:72px 24px 80px} .serv{padding:72px 24px 96px} .close{padding-top:24px}
+/* the Buddha's words */
+.qsec{padding:72px 24px 40px;text-align:center;background:#000}
+.qsec .lead{max-width:40rem;margin:0 auto 26px;font-size:1rem;line-height:1.8;color:rgba(255,255,255,.6)}
+.qsec blockquote{margin:0 auto;max-width:60rem;font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:1.2;color:#fff}
+body.lang-th .qsec blockquote{line-height:1.4}
+.qsec .after{max-width:44rem;margin:30px auto 0;font-size:clamp(1rem,1.25vw,1.12rem);line-height:1.9;color:rgba(255,255,255,.7)}
+.phil-t .blk p + p{margin-top:12px}
+.phil h2{margin-bottom:48px!important}
+@media (max-width:480px){body.lang-en .hero h1{font-size:clamp(3rem,14.5vw,4.5rem)}}
+.cards .card h3{margin-bottom:0}
+@media (max-width:767px){.qsec{padding:56px 20px 24px}.phil{padding:56px 20px}.serv{padding:56px 20px 72px}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+
+<style id="tn-hero-card">
+/* ═════ หน้าแรกแบบ Terranova (การ์ดแก้วหักเหแสง) บนพื้นของ Know it all ═════ */
+.tnh{--gx:clamp(20px,4vw,64px);--ink:#121417;--ink2:#363a41;--mute:#6a6f77;--line:rgba(18,20,23,.12);--line2:rgba(18,20,23,.2);
+  --mono:ui-monospace,"SF Mono","Menlo","Consolas",monospace;--tf:'Geist','Noto Sans Thai',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+.tnh::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 38%,rgba(0,0,0,0) 62%)}
+.hero.tnh .hero-c{position:absolute!important;left:calc(var(--gx) + 32px);top:calc(110px + clamp(24px,6vh,80px));right:auto;bottom:auto;z-index:10;flex:none;
+  width:min(560px,calc(100vw - 2*var(--gx) - 64px - 340px - 56px));padding:0!important;align-items:flex-start;justify-content:flex-start!important;text-align:left;gap:24px!important;transform:none!important}
+.tnh .tn-kick{display:flex;align-items:center;gap:12px;font:500 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.tnh .tn-kick .th{font-family:var(--tf);letter-spacing:.04em;font-size:.82rem}
+.tnh .tn-kick::before{content:'';width:28px;height:1px;background:#fff;opacity:.8}
+.hero.tnh h1{font-size:clamp(3.4rem,6.4vw,6.6rem)!important;white-space:nowrap;line-height:1.05}
+body.lang-th .hero.tnh h1{line-height:1.2}
+.tnh .ask{max-width:30rem}
+.tnh .hero-sub{padding:0;max-width:30rem;text-align:left}
+.tnh .tn-chamfer{--c:14px;display:inline-flex;align-items:center;gap:14px;padding:16px 26px 16px 24px;background:#fff;color:#121417;font:500 .9rem/1 var(--tf);letter-spacing:.01em;
+  clip-path:polygon(var(--c) 0,100% 0,100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,0 100%,0 var(--c));transition:background .25s,gap .3s var(--ease)}
+.tnh .tn-chamfer:hover{background:#e9ebed;gap:20px} .tnh .tn-chamfer svg{width:14px;height:14px}
+.tnh .socials{display:none}
+/* edge rules with + marks */
+.tnh .tn-rules{position:absolute;inset:0;z-index:4;pointer-events:none;display:none}
+.tnh .tn-rules i{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.12);left:calc(var(--gx) + 0px)}
+.tnh .tn-rules i:nth-child(2){left:auto;right:var(--gx)}
+.tnh .tn-rules b{position:absolute;width:15px;height:15px;margin:-7px 0 0 -7px}
+.tnh .tn-rules b::before,.tnh .tn-rules b::after{content:'';position:absolute;background:rgba(255,255,255,.45)}
+.tnh .tn-rules b::before{left:7px;top:0;width:1px;height:15px} .tnh .tn-rules b::after{top:7px;left:0;height:1px;width:15px}
+.tnh .tn-rules b:nth-of-type(1){left:var(--gx);top:104px} .tnh .tn-rules b:nth-of-type(2){left:calc(100% - var(--gx));top:104px}
+.tnh .tn-rules b:nth-of-type(3){left:var(--gx);top:calc(100% - 56px)} .tnh .tn-rules b:nth-of-type(4){left:calc(100% - var(--gx));top:calc(100% - 56px)}
+@media (min-width:768px){.tnh .tn-rules{display:block}}
+.tnh .tn-scroll{position:absolute;z-index:10;left:calc(var(--gx) + 32px);bottom:40px;display:flex;align-items:center;gap:10px;font:500 .7rem/1 var(--mono);letter-spacing:.14em;color:rgba(255,255,255,.7);text-transform:uppercase}
+.tnh .tn-scroll i{width:1px;height:34px;background:#fff;opacity:.5;transform-origin:top;animation:tn-drop 2.2s var(--ease) infinite}
+@keyframes tn-drop{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* the glass card (as in Terranova) — the frost is thicker than on Terranova's light page so the dark text stays readable over night footage */
+.tnh .tn-card{position:absolute;z-index:12;right:calc(var(--gx) + 32px);bottom:40px;width:340px;height:min(460px,calc(100svh - 190px));border-radius:48px;overflow:hidden;isolation:isolate;
+  font-family:var(--tf);color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.12);opacity:0;animation:tn-card-in 900ms var(--ease) .35s forwards}
+@keyframes tn-card-in{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+.tnh .tn-refr{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);z-index:0}
+.tnh .tn-card.fx .tn-refr{filter:url(#liquid-glass-refraction);will-change:transform}
+.tnh .tn-frost{position:absolute;inset:0;z-index:1;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.84) 0%,rgba(255,255,255,.7) 42%,rgba(255,255,255,.78) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 0 1px rgba(255,255,255,.55),inset 0 -18px 40px rgba(255,255,255,.25)}
+.tnh .tn-card.nofx .tn-frost{background:rgba(250,250,248,.6);backdrop-filter:blur(26px) saturate(1.4);-webkit-backdrop-filter:blur(26px) saturate(1.4)}
+.tnh .tn-card-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding:34px 30px 26px;text-align:left}
+.tnh .tn-card-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line2)}
+.tnh .tn-card-h b{font-weight:500;font-size:1rem;letter-spacing:-.005em}
+.tnh .tn-card-h small{font:500 .74rem/1 var(--mono);letter-spacing:.08em;color:var(--ink2)}
+.tnh .tn-finds{list-style:none;margin:10px 0 0;padding:0;flex:1;min-height:0;display:flex;flex-direction:column;gap:2px}
+.tnh .tn-finds li{border-bottom:1px solid var(--line)} .tnh .tn-finds li:last-child{border-bottom:0}
+.tnh .tn-finds a{display:grid;grid-template-columns:34px 1fr 30px;align-items:center;gap:8px;padding:13px 10px;margin:0 -10px;border-radius:16px;color:var(--ink);transition:background-color .12s}
+.tnh .tn-fn{align-self:start;padding-top:4px;font:500 .72rem/1 var(--mono);color:var(--mute)}
+.tnh .tn-ft{display:flex;flex-direction:column;gap:5px;min-width:0}
+.tnh .tn-ft b{font-size:1rem;font-weight:500;line-height:1.4;letter-spacing:-.005em}
+.tnh .tn-ft small{font:500 .64rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tnh .tn-fa{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);transition:background-color .12s,border-color .12s,color .12s}
+.tnh .tn-fa svg{width:12px;height:12px;transition:transform .14s ease-out}
+.tnh .tn-finds a:hover{background:rgba(255,255,255,.45)}
+.tnh .tn-finds a:hover .tn-fa{background:var(--ink);border-color:var(--ink);color:#fff}
+.tnh .tn-finds a:hover .tn-fa svg{transform:translateX(2px)}
+.tnh .tn-finds a.on{background:rgba(18,20,23,.07)} .tnh .tn-finds a.on .tn-fn{color:var(--ink)}
+.tnh .tn-here{display:inline-block;margin-left:8px;padding:2px 7px;font:500 .58rem/1.4 var(--mono);letter-spacing:.1em;background:var(--ink);color:#fff;vertical-align:2px}
+.tnh .tn-wave{height:58px;margin-top:10px;position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+.tnh .tn-wave svg{position:absolute;left:0;top:0;width:200%;height:100%;animation:tn-wave 7s linear infinite}
+.tnh .tn-wave svg path{fill:none;stroke:var(--ink);stroke-width:1.1}
+@keyframes tn-wave{to{transform:translateX(-50%)}}
+.tnh .tn-card-f{display:flex;justify-content:space-between;font:500 .66rem/1 var(--mono);letter-spacing:.1em;color:var(--mute);margin-top:6px}
+/* clear variant: see-through glass, light text (จิตศาสตร์ · พุทธศาสตร์ — night footage) */
+.tnh .tn-card.tn-clear{--ink:#fff;--ink2:rgba(255,255,255,.78);--mute:rgba(255,255,255,.55);--line:rgba(255,255,255,.12);--line2:rgba(255,255,255,.24);color:#fff;
+  box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.tnh .tn-card.tn-clear .tn-frost{background:linear-gradient(160deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.05) 45%,rgba(255,255,255,.1) 100%),rgba(6,8,16,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 0 0 1px rgba(255,255,255,.18),inset 0 -18px 40px rgba(255,255,255,.05)}
+.tnh .tn-card.tn-clear.nofx .tn-frost{background:rgba(10,12,20,.3);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
+.tnh .tn-card.tn-clear .tn-card-in{text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.tnh .tn-card.tn-clear .tn-finds a:hover{background:rgba(255,255,255,.1)}
+.tnh .tn-card.tn-clear .tn-finds a:hover .tn-fa{background:#fff;border-color:#fff;color:#121417}
+.tnh .tn-card.tn-clear .tn-finds a.on{background:rgba(255,255,255,.12)}
+.tnh .tn-card.tn-clear .tn-here{background:#fff;color:#121417;text-shadow:none}
+.tnh .tn-card.tn-clear .tn-wave svg path{stroke:#fff}
+@media (max-height:760px) and (min-width:901px){.tnh .tn-finds a{padding:9px 10px}.tnh .tn-wave{display:none}.tnh .tn-card-in{padding:26px 26px 20px}
+  .hero.tnh .hero-c{top:120px;gap:16px!important}.hero.tnh h1{font-size:clamp(3rem,5.4vw,5rem)!important}}
+@media (max-width:1100px) and (min-width:901px){.tnh .tn-card{width:300px}.hero.tnh .hero-c{width:calc(100vw - 2*var(--gx) - 64px - 300px - 40px)}.hero.tnh h1{font-size:clamp(3rem,6vw,4.6rem)!important}}
+/* phones / small tablets: everything stacks, card under the title (as Terranova does) */
+@media (max-width:900px){
+  .hero.tnh{height:auto;min-height:100svh}
+  .tnh::before{background:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.15) 45%,rgba(0,0,0,.55))}
+  .hero.tnh .hero-c{position:relative!important;left:auto;top:auto;width:auto;margin:28px 20px 0;gap:18px!important}
+  .hero.tnh h1{font-size:clamp(2.8rem,13vw,4.4rem)!important}
+  .tnh .tn-card{position:relative;right:auto;bottom:auto;margin:36px auto 40px;width:calc(100% - 40px);max-width:400px;height:auto;border-radius:40px}
+  .tnh .tn-card-in{padding:30px 26px 22px} .tnh .tn-finds{flex:none}
+  .tnh .tn-scroll{display:none}
+}
+@media (prefers-reduced-motion:reduce){.tnh .tn-card{animation:none;opacity:1}.tnh .tn-wave svg,.tnh .tn-scroll i{animation:none}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── main-site top menu (copied from index.html) ── */
+:root{--nav-height:68px;--bg-void:#06101e;--gold:#9acfe1;--gold-light:#bee3ef;--gold-glow:rgba(154,207,225,0.21);--white-pure:#dff6fb;--shimmer:#c3e6f0;--text-muted:#bee3ee;--border-gold:rgba(154,207,225,0.21);--cg-sans:'Manrope','Noto Sans Thai',system-ui,sans-serif}
+.navbar{position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 90; background: rgba(9,25,44,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-gold); display: flex; align-items: center;}
+.navbar-inner{max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;}
+.brand{font-family: "Manrope", "Noto Sans Thai", sans-serif; font-weight: 600; color: var(--gold-light); font-size: 1.05rem; text-decoration: none; display: flex; align-items: center; gap: 10px; flex-shrink: 0; cursor: pointer;}
+.brand-orb{width: 32px; height: 32px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, var(--white-pure) 0%, var(--shimmer) 60%, transparent 100%); box-shadow: 0 0 15px var(--gold-glow);}
+.brand-text{display: flex; flex-direction: column; line-height: 1.15;}
+.brand-name{font-size: 1.1rem; letter-spacing: 2px; font-weight: 600;}
+.brand-by{font-family: "Manrope", "Noto Sans Thai", sans-serif; font-size: 0.72rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.3px;}
+.brand-text .en{display: none;}
+body.lang-en .brand-text .th{display: none;}
+body.lang-en .brand-text .en{display: block;}
+.nav-menu{display: flex; gap: 4px; list-style: none; flex: 1; justify-content: center; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;}
+.nav-menu::-webkit-scrollbar{display: none;}
+.nav-menu a{color: var(--text-muted); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 0.88rem; font-weight: 500; white-space: nowrap; transition: color .12s ease, background-color .12s ease; display: block; cursor: pointer;}
+.nav-menu a:hover{color: var(--gold-light); background: rgba(172,217,231,0.105);}
+.nav-menu a.active{color: var(--bg-void); background: linear-gradient(135deg, var(--gold), var(--shimmer)); box-shadow: 0 4px 20px var(--gold-glow); font-weight: 700;}
+.nav-menu a.featured{background: linear-gradient(135deg, rgba(154,207,225,0.105), rgba(172,217,231,0.105)); color: var(--gold); border: 1px solid var(--border-gold);}
+.nav-menu a.featured.active{background: linear-gradient(135deg, var(--gold), var(--shimmer)); color: var(--bg-void); border-color: var(--gold); box-shadow: 0 4px 20px var(--gold-glow);}
+.lang-toggle{background: rgba(17,44,75,0.7); border: 1px solid var(--border-gold); border-radius: 999px; padding: 4px; display: flex; gap: 2px; flex-shrink: 0;}
+.lang-btn{background: transparent; border: none; color: var(--text-muted); padding: 5px 12px; border-radius: 999px; cursor: pointer; font-family: inherit; font-size: 0.8rem; font-weight: 600; transition: color .12s ease, background-color .12s ease;}
+.lang-btn.active{background: linear-gradient(135deg, var(--gold), var(--shimmer)); color: var(--bg-void);}
+.lang-btn:hover:not(.active){color: var(--gold-light);}
+.menu-toggle{display: none; background: none; border: none; color: var(--gold); font-size: 1.5rem; cursor: pointer; padding: 4px;}
+@media (max-width: 900px){.menu-toggle{display: block;}}
+@media (max-width: 900px){.nav-menu{position: fixed; top: var(--nav-height); right: -100%; background: rgba(9,25,44,0.97); backdrop-filter: blur(20px); flex-direction: column; padding: 20px; width: 280px; height: calc(100vh - var(--nav-height)); align-items: stretch; transition: right 0.3s; border-left: 1px solid var(--border-gold);}}
+@media (max-width: 900px){.nav-menu.open{right: 0;}}
+@media (max-width: 900px){.nav-menu a{padding: 14px 16px; text-align: left;}}
+.navbar{background: rgba(0,0,0,.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,.06); transition: background .4s, border-color .4s;}
+.navbar-inner{max-width: 1440px;}
+.brand{gap: 10px;}
+.brand-orb{width: 26px; height: 26px; box-shadow: 0 0 12px rgba(255,255,255,.35);}
+.brand-name{font-family: var(--cg-sans); font-weight: 800; letter-spacing: .1em; font-size: 1.05rem; color: #fff;}
+.brand-by{font-family: var(--cg-sans); color: rgba(255,255,255,.5);}
+.nav-menu{gap: 6px;}
+.nav-menu a{position: relative; font-family: var(--cg-sans); font-size: .84rem; font-weight: 500; color: rgba(255,255,255,.72); padding: 8px 14px; border-radius: 999px; background: none;}
+.nav-menu a:hover{color: #fff; background: rgba(255,255,255,.06);}
+.nav-menu a.active{color: #fff; background: none; box-shadow: none; font-weight: 600;}
+.nav-menu a.active::after{content: ""; position: absolute; left: 50%; bottom: 1px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: #fff; box-shadow: 0 0 8px rgba(255,255,255,.9);}
+.lang-toggle{background: rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.16); padding: 3px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+.lang-btn{font-family: var(--cg-sans); color: rgba(255,255,255,.55); padding: 6px 13px; font-size: .78rem;}
+.lang-btn.active{background: rgba(255,255,255,.14); color: #fff;}
+.lang-btn:hover:not(.active){color: #fff;}
+.menu-toggle{color: #fff;}
+@media (max-width: 900px){.nav-menu{background: rgba(0,0,0,.92); border-left: 1px solid rgba(255,255,255,.08);}}
+@media (max-width: 900px){.nav-menu a{border-radius: 12px;}}
+@media (max-width: 900px){.nav-menu a.active{background: rgba(255,255,255,.08);}}
+@media (max-width: 900px){.nav-menu a.active::after{display: none;}}
+.navbar{background: rgba(6,19,35,.72); border-bottom: 1px solid rgba(157,226,240,.1);}
+.nav-menu a.active::after{background: #9de2f0; box-shadow: 0 0 8px rgba(157,226,240,.9);}
+.lang-toggle{background: rgba(6,19,35,.7); border-color: rgba(157,226,240,.2);}
+.lang-btn.active{background: rgba(118,206,226,.22);}
+@media (max-width: 900px){.nav-menu{background: rgba(6,19,35,.96); border-left-color: rgba(157,226,240,.14);}}
+.navbar,.navbar *{box-sizing:border-box}
+/* match the site's inherited text settings (body font, colour, letter-spacing) and its final orb colours */
+.navbar{--white-pure:#fff;--shimmer:#9de2f0;font-family:"Manrope","Noto Sans Thai",-apple-system,sans-serif;font-size:16px;font-weight:400;line-height:28px;letter-spacing:.08px;color:rgb(238,246,249)}
+.navbar .brand{color:#fff;letter-spacing:.08px;line-height:29.4px}
+.navbar .nav-menu a{letter-spacing:.08px;line-height:23.52px}
+.navbar .lang-toggle{padding:3px;font-size:16px;font-weight:400;line-height:28px}
+.navbar .lang-btn{padding:6px 13px;line-height:normal;font-size:.78rem;font-weight:600;letter-spacing:normal}
+.navbar .menu-toggle{font-family:Arial,sans-serif;line-height:normal}
+:where(.navbar ul,.navbar li){margin:0;padding:0;list-style:none}
+.navbar a{text-decoration:none}
+.navbar .nav-side{display:flex;gap:12px;align-items:center}
+.navbar .lang-btn.on{background:rgba(118,206,226,.22);color:#fff}
+/* science pages: clear like the knowledge page over the hero, the site's solid bar once scrolled */
+.navbar{background:linear-gradient(to bottom,rgba(2,6,13,.6),rgba(2,6,13,0));border-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+.navbar.solid{background:rgba(6,19,35,.72);border-bottom:1px solid rgba(157,226,240,.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+@media (max-width:900px){.navbar.open-menu{background:rgba(6,19,35,.96)}}
+.nav-space{height:var(--nav-height);flex:0 0 auto}
+/* back to the knowledge page: sticky pill top-left (same size as the pure-energy "← เมนู"), clear glass with white text (Tay) */
+.kn-back{position:fixed;z-index:85;top:calc(var(--nav-height) + 12px);left:clamp(20px,2.4vw,32px);display:inline-flex;align-items:center;gap:6px;color:#fff;
+  background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05)),rgba(10,14,22,.22);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);
+  border:1px solid rgba(255,255,255,.28);text-shadow:0 1px 6px rgba(0,0,0,.35);
+  font-family:'Geist','Noto Sans Thai',sans-serif;font-size:.88rem;font-weight:500;line-height:1.7;letter-spacing:normal;padding:9px 17px;border-radius:999px;white-space:nowrap;text-decoration:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px rgba(0,0,0,.18);transition:background-color .2s,border-color .2s}
+.kn-back:hover{background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08)),rgba(10,14,22,.3);border-color:rgba(255,255,255,.45)}
+.tnh .tn-rules b:nth-of-type(1){display:none}
+@media (max-width:900px){.nav-space{height:calc(var(--nav-height) + 58px)}}
+@media (max-width:600px){.kn-back{padding:7px 13px;font-size:.82rem}}
+</style>
+
+<style id="acc-table">
+/* ── ตารางการเข้าถึง (shared by จิตศาสตร์ and พุทธศาสตร์) ── */
+.acc{position:relative;padding:150px 24px 120px;background:#000;overflow:hidden}
+.acc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(233,201,120,.05),transparent 60%);pointer-events:none}
+.acc h2{font-size:clamp(2.6rem,6vw,5rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
+body.lang-th .acc h2{line-height:1.3;letter-spacing:0}
+.acc h2 em{color:rgba(255,255,255,.45)!important}
+.acc .label em{font-style:normal;color:rgba(233,201,120,.75)}
+.acc-lead{max-width:46rem;font-size:clamp(1rem,1.3vw,1.125rem);line-height:1.85;color:rgba(255,255,255,.62);margin-bottom:56px}
+.acc-lead strong{color:#fff;font-weight:500}
+.acc-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
+.acc-row{display:grid;grid-template-columns:132px minmax(0,1fr) minmax(0,1.55fr) 150px;gap:30px;align-items:center;border-radius:22px;padding:26px 30px}
+.acc-e .acc-k{white-space:nowrap}
+.acc-k{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:8px}
+body.lang-th .acc-k{letter-spacing:.06em;font-size:.74rem}
+.acc-wc{position:relative;width:112px;height:112px;margin:0 auto}
+.acc-w{width:100%;height:100%;display:block;overflow:visible}
+.acc-dim{color:rgba(255,255,255,.12)}
+.acc-gold{color:#e9c97a;filter:drop-shadow(0 0 6px rgba(233,201,122,.35))}
+.acc-sweep{stroke-dasharray:100 100;stroke-dashoffset:100;transition:stroke-dashoffset 1.8s var(--ease) .25s}
+.acc-row.in .acc-sweep{stroke-dashoffset:calc(100 - var(--p))}
+.acc-pct{position:absolute;right:-6px;bottom:-4px;font-size:.78rem;font-weight:600;color:#000;background:#e9c97a;border-radius:99px;padding:2px 8px;line-height:1.4}
+.acc-a h3{font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.2;margin:0 0 6px}
+.acc-a p{margin:0;font-size:.95rem;color:rgba(255,255,255,.75)}
+.acc-a p.acc-el{color:#e9c97a;margin-top:2px}
+.acc-j{border-left:1px solid rgba(255,255,255,.1);padding-left:28px}
+.acc-j h4{font-size:1.06rem;font-weight:500;margin:0 0 6px}
+.acc-j h4 small{font-weight:400;color:rgba(255,255,255,.5);font-size:.85em}
+.acc-j p{margin:0;font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.62)}
+.acc-e{text-align:right}
+.acc-e b{display:block;font-size:2.6rem;line-height:1;letter-spacing:-.02em}
+.acc-e b i{font-style:normal;font-size:.5em;color:rgba(255,255,255,.5);margin-left:2px}
+.acc-bar{display:block;height:3px;border-radius:3px;background:rgba(255,255,255,.1);margin-top:12px;overflow:hidden}
+.acc-bar i{display:block;height:100%;width:calc(var(--v) * 1%);background:linear-gradient(90deg,rgba(233,201,122,.4),#e9c97a);transform-origin:left;transform:scaleX(0);transition:transform 1.6s var(--ease) .4s}
+.acc-row.in .acc-bar i{transform:none}
+/* page emphasis: พุทธศาสตร์ leads with the noble one, จิตศาสตร์ with the jhāna */
+.acc-mind .acc-j h4{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.2}
+.acc-mind .acc-a h3{font-size:1.3rem}
+.acc-mind .acc-row{grid-template-columns:132px minmax(0,1.55fr) minmax(0,1fr) 150px}
+.acc-mind .acc-j{order:1;border-left:0;padding-left:0}
+.acc-mind .acc-a{order:2;border-left:1px solid rgba(255,255,255,.1);padding-left:28px}
+.acc-mind .acc-e{order:3}
+.acc-link{display:inline-flex;align-items:center;gap:10px;margin-top:34px;font-size:.92rem;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:4px;transition:color .3s,border-color .3s}
+.acc-link:hover{color:#fff;border-color:#e9c97a}
+.acc-link svg{width:12px;height:12px}
+@media (max-width:1100px){
+  .acc-row,.acc-mind .acc-row{grid-template-columns:110px minmax(0,1fr) 170px;gap:22px}
+  .acc-wc{width:96px;height:96px}
+  .acc-j,.acc-mind .acc-a{grid-column:2 / 4;grid-row:2;border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+  .acc-mind .acc-j{grid-column:2;grid-row:1;border-top:0;padding-top:0}
+  .acc-mind .acc-a{grid-column:2 / 4}
+  .acc-e b{font-size:2.1rem}
+}
+@media (max-width:640px){
+  .acc{padding:96px 16px 80px}
+  .acc-lead{margin-bottom:36px}
+  .acc-row,.acc-mind .acc-row{grid-template-columns:84px minmax(0,1fr);gap:16px 18px;padding:22px 20px;align-items:start}
+  .acc-wc{width:80px;height:80px}
+  .acc-a,.acc-mind .acc-j{grid-column:2;grid-row:1}
+  .acc-j,.acc-mind .acc-a{grid-column:1 / 3;grid-row:2;padding-top:14px}
+  .acc-e,.acc-mind .acc-e{grid-column:1 / 3;grid-row:3;text-align:left;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+  .acc-e .acc-k{margin:0;white-space:normal}
+  .acc-e b{font-size:1.5rem;order:3}
+  .acc-e .acc-bar{margin:0}
+}
+@media (prefers-reduced-motion:reduce){.acc-sweep,.acc-bar i{transition:none}}
+</style>
+
+<style id="nat-fig">
+/* ── ภาพประกอบ: พระธรรมซ่อนซ้อนอยู่ใน ดิน · น้ำ · อากาศ ── */
+.nat-fig{margin:28px 0 0}
+.nat-fig svg{display:block;width:100%;height:auto;border-radius:24px;box-shadow:inset 0 1px 1px rgba(255,255,255,.1),0 0 0 1px rgba(255,255,255,.08)}
+.nat-fig .t1{font-size:15px;letter-spacing:.14em;fill:rgba(255,255,255,.5)}
+.nat-fig .t2{font-size:26px;fill:#ffe9b0}
+.nat-fig .t3{font-size:16px;fill:rgba(255,255,255,.62)}
+body.lang-th .nat-fig .en-svg,body.lang-en .nat-fig .nat-lab:not(.en-svg){display:none}
+.nat-pe{fill:url(#natPE);transform-box:fill-box;transform-origin:center;animation:natTw 3.6s ease-in-out infinite}
+.nat-pe.d1{animation-delay:-.9s}.nat-pe.d2{animation-delay:-1.8s}.nat-pe.d3{animation-delay:-2.7s}
+@keyframes natTw{0%,100%{opacity:.55;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+.nat-wind path{stroke-dasharray:8 14;animation:natW 9s linear infinite}
+@keyframes natW{to{stroke-dashoffset:-220}}
+.nat-wave{animation:natWv 7s ease-in-out infinite alternate}
+@keyframes natWv{to{transform:translateX(-40px)}}
+.nat-fig figcaption{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.5)}
+.nat-dot{width:9px;height:9px;border-radius:50%;background:#ffe9b0;box-shadow:0 0 10px 2px rgba(233,201,122,.6);flex:none}
+.nat-leg{display:none;list-style:none;margin:14px 0 0;padding:0}
+@media (max-width:640px){
+  .nat-fig .nat-lab,.nat-fig .nat-panel{display:none!important}
+  .nat-fig svg{aspect-ratio:900/700}
+  .nat-leg{display:grid;gap:8px}
+  .nat-leg li{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 1px rgba(255,255,255,.08);font-size:.9rem;color:#ffe9b0}
+  .nat-leg b{font-weight:400;font-size:.72rem;letter-spacing:.12em;color:rgba(255,255,255,.5)}
+}
+@media (prefers-reduced-motion:reduce){.nat-pe,.nat-wind path,.nat-wave{animation:none}}
+</style>
+<style id="nat-fig-v2">.nat-fl{transform-box:fill-box;transform-origin:50% 100%;animation:natFl 1.8s ease-in-out infinite alternate}@keyframes natFl{0%{transform:scaleY(.82) scaleX(1.04);opacity:.75}100%{transform:scaleY(1.12) scaleX(.94);opacity:1}}@media (prefers-reduced-motion:reduce){.nat-fl{animation:none}}</style></head>
+<body class="lang-th">
+<nav class="navbar" id="siteNav">
+  <div class="navbar-inner">
+    <a class="brand" href="../index.html#home">
+      <div class="brand-orb"></div>
+      <div class="brand-text">
+        <span class="brand-name">B4BIGBANG</span>
+        <span class="brand-by th">By ลุงหงอกพลังงานบริสุทธิ์</span>
+        <span class="brand-by en">By Loongngork Pure Energy</span>
+      </div>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html#home"><span class="th">หน้าแรก</span><span class="en">Home</span></a></li>
+      <li><a href="../index.html#about"><span class="th">ลุงหงอกคือใคร</span><span class="en">About</span></a></li>
+      <li><a href="../index.html#knowledge" class="active" aria-current="page"><span class="th">องค์ความรู้แห่งศตวรรษที่ ๒๑</span><span class="en">21st Century Knowledge</span></a></li>
+      <li><a href="../index.html#contact"><span class="th">ติดต่อ</span><span class="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-side">
+      <div class="lang-toggle lang">
+        <button class="lang-btn active on" data-l="th" type="button">ไทย</button>
+        <button class="lang-btn" data-l="en" type="button">EN</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+<a class="kn-back" href="../index.html#knowledge">← <span class="th">กลับองค์ความรู้</span><span class="en">Back to Knowledge</span></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- liquid-glass refraction: the noise × edge map (feTurbulence 0.012 0.015 · 3 octaves, SourceAlpha blur 45, slope -1.3 / intercept 1)
+       is computed once in JS and fed in as an image, so each video frame only runs the cheap R/G/B displacement + screen blends -->
+  <filter id="liquid-glass-refraction" x="0" y="0" width="100%" height="100%" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feImage id="tnMap" x="0" y="0" width="420" height="540" preserveAspectRatio="none" result="map"/>
+    <feDisplacementMap in="SourceGraphic" in2="map" scale="65" xChannelSelector="R" yChannelSelector="G" result="dR"/>
+    <feColorMatrix in="dR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="cR"/>
+    <feDisplacementMap in="SourceGraphic" in2="map" scale="56" xChannelSelector="R" yChannelSelector="G" result="dG"/>
+    <feColorMatrix in="dG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="cG"/>
+    <feDisplacementMap in="SourceGraphic" in2="map" scale="47" xChannelSelector="R" yChannelSelector="G" result="dB"/>
+    <feColorMatrix in="dB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="cB"/>
+    <feBlend in="cR" in2="cG" mode="screen" result="rg"/>
+    <feBlend in="rg" in2="cB" mode="screen"/>
+  </filter>
+</svg>
+
+<!-- ═════ HERO ═════ -->
+<section class="hero tnh bud-hero" style="--poster:url(../website_assets/images/bud_bg1_hero.jpg)">
+  <div class="bud-back" aria-hidden="true"></div>
+  <video class="hero-v" id="heroV" style="opacity:1" poster="../website_assets/images/bud_bg1_hero.jpg" muted autoplay playsinline preload="auto"><source src="../website_assets/videos/bud_bg1_hero.mp4" type="video/mp4"></video>
+  <div class="nav-space" aria-hidden="true"></div>
+    <div class="hero-c">
+    <div class="tn-kick"><span class="th">๔ ศาสตร์ของลุงหงอก · ๓</span><span class="en">Uncle Ngok’s four sciences · 03</span></div>
+    <h1 class="serif"><span class="th">พุทธ<em>ศาสตร์</em></span><span class="en">Buddhist <em>Science</em></span></h1>
+    <a class="ask lg" href="#about"><span class="q"><span class="th">“เห็น” กับ “เข้าถึง”</span><span class="en">“Seeing” and “reaching”</span></span><span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <p class="hero-sub"><span class="th">ศาสนาศาสตร์ · ศาสตร์ที่ ๓ ใน ๔ ศาสตร์ที่ลุงหงอกใช้ในเวลาเดียวกัน</span><span class="en">Religious science · science 3 of the four that Uncle Ngok uses at the same time</span></p>
+    <a class="tn-chamfer" href="#about"><span class="th">เริ่มอ่าน</span><span class="en">Start reading</span><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></a>
+  </div>
+  <nav class="socials" aria-label="ศาสตร์ทั้งสี่"><a class="lg kia-soc" href="lunghgnok_dhamma.html" title="ธรรมศาสตร์ · Dhamma Science"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36c-5-4-7-9-7-14 0-5 3-9 7-13 4 4 7 8 7 13 0 5-2 10-7 14z"></path><path d="M24 36c-6 0-12-3-15-9 4-2 8-2 11 0"></path><path d="M24 36c6 0 12-3 15-9-4-2-8-2-11 0"></path><path d="M8 38h32"></path></svg><span class="sr">ธรรมศาสตร์</span></a><a class="lg kia-soc" href="lunghgnok_mind.html" title="จิตศาสตร์ · Mind Science"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="3.2" class="f"></circle><circle cx="24" cy="24" r="9"></circle><circle cx="24" cy="24" r="15" opacity=".7"></circle><circle cx="24" cy="24" r="20.5" opacity=".4"></circle></svg><span class="sr">จิตศาสตร์</span></a><a class="lg kia-soc on" aria-current="page" href="lunghgnok_buddhism.html" title="พุทธศาสตร์ · Buddhist Science"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5v7"></path><path d="M21 12h6l-1 5h-4z"></path><path d="M15 27c0-6 4-10 9-10s9 4 9 10z"></path><path d="M12 27h24v4H12z"></path><path d="M9 31h30v5H9z"></path><path d="M6 36h36v5H6z"></path></svg><span class="sr">พุทธศาสตร์</span></a><a class="lg kia-soc" href="lunghgnok_science.html" title="วิทยาศาสตร์ · Science"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="2.8" class="f"></circle><ellipse cx="24" cy="24" rx="19" ry="7"></ellipse><ellipse cx="24" cy="24" rx="19" ry="7" transform="rotate(60 24 24)"></ellipse><ellipse cx="24" cy="24" rx="19" ry="7" transform="rotate(-60 24 24)"></ellipse></svg><span class="sr">วิทยาศาสตร์</span></a></nav>
+
+  <div class="tn-rules" aria-hidden="true"><i></i><i></i><b></b><b></b><b></b><b></b></div>
+  <aside class="tn-card tn-clear" id="tnCard">
+    <canvas class="tn-refr" id="tnRefr" aria-hidden="true"></canvas>
+    <div class="tn-frost"></div>
+    <div class="tn-card-in">
+      <div class="tn-card-h"><b><span class="th">ศาสตร์ทั้งสี่</span><span class="en">The four sciences</span></b><small>//04</small></div>
+      <ul class="tn-finds"><li><a href="lunghgnok_dhamma.html"><span class="tn-fn">01</span><span class="tn-ft"><b><span class="th">ธรรมศาสตร์</span><span class="en">Dhamma Science</span></b><small><span class="th">ธรรมชาติ</span><span class="en">Nature</span></small></span><span class="tn-fa"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span></a></li><li><a href="lunghgnok_mind.html"><span class="tn-fn">02</span><span class="tn-ft"><b><span class="th">จิตศาสตร์</span><span class="en">Mind Science</span></b><small><span class="th">พลังงานบริสุทธิ์</span><span class="en">Pure energy</span></small></span><span class="tn-fa"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span></a></li><li><a href="lunghgnok_buddhism.html" class="on" aria-current="page"><span class="tn-fn">03</span><span class="tn-ft"><b><span class="th">พุทธศาสตร์</span><span class="en">Buddhist Science</span><span class="tn-here"><span class="th">อยู่ที่นี่</span><span class="en">HERE</span></span></b><small><span class="th">ศาสนาศาสตร์</span><span class="en">Religious science</span></small></span><span class="tn-fa"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span></a></li><li><a href="lunghgnok_science.html"><span class="tn-fn">04</span><span class="tn-ft"><b><span class="th">วิทยาศาสตร์</span><span class="en">Science</span></b><small><span class="th">พลังงานทั้ง 6 สาขา</span><span class="en">The six branches of energy</span></small></span><span class="tn-fa"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span></a></li></ul>
+      <div class="tn-wave"><svg viewBox="0 0 680 58" preserveAspectRatio="none" aria-hidden="true"><path d="M0,29.0 L4,32.8 L8,36.2 L12,39.1 L16,41.0 L20,41.9 L24,41.7 L28,40.4 L32,38.1 L36,35.0 L40,31.4 L44,27.6 L48,23.9 L52,20.6 L56,18.1 L60,16.5 L64,16.0 L68,16.6 L72,18.3 L76,21.0 L80,24.3 L84,28.0 L88,31.9 L92,35.4 L96,38.4 L100,40.6 L104,41.8 L108,41.9 L112,40.8 L116,38.8 L120,35.8 L124,32.3 L128,28.5 L132,24.8 L136,21.4 L140,18.6 L144,16.8 L148,16.0 L152,16.4 L156,17.8 L160,20.2 L164,23.4 L168,27.1 L172,30.9 L176,34.6 L180,37.8 L184,40.2 L188,41.6 L192,42.0 L196,41.2 L200,39.4 L204,36.6 L208,33.2 L212,29.5 L216,25.7 L220,22.2 L224,19.2 L228,17.2 L232,16.1 L236,16.2 L240,17.4 L244,19.6 L248,22.6 L252,26.1 L256,30.0 L260,33.7 L264,37.0 L268,39.7 L272,41.4 L276,42.0 L280,41.5 L284,39.9 L288,37.4 L292,34.1 L296,30.4 L300,26.6 L304,23.0 L308,19.9 L312,17.6 L316,16.3 L320,16.1 L324,17.0 L328,18.9 L332,21.8 L336,25.2 L340,29.0 L344,32.8 L348,36.2 L352,39.1 L356,41.0 L360,41.9 L364,41.7 L368,40.4 L372,38.1 L376,35.0 L380,31.4 L384,27.6 L388,23.9 L392,20.6 L396,18.1 L400,16.5 L404,16.0 L408,16.6 L412,18.3 L416,21.0 L420,24.3 L424,28.0 L428,31.9 L432,35.4 L436,38.4 L440,40.6 L444,41.8 L448,41.9 L452,40.8 L456,38.8 L460,35.8 L464,32.3 L468,28.5 L472,24.8 L476,21.4 L480,18.6 L484,16.8 L488,16.0 L492,16.4 L496,17.8 L500,20.2 L504,23.4 L508,27.1 L512,30.9 L516,34.6 L520,37.8 L524,40.2 L528,41.6 L532,42.0 L536,41.2 L540,39.4 L544,36.6 L548,33.2 L552,29.5 L556,25.7 L560,22.2 L564,19.2 L568,17.2 L572,16.1 L576,16.2 L580,17.4 L584,19.6 L588,22.6 L592,26.1 L596,30.0 L600,33.7 L604,37.0 L608,39.7 L612,41.4 L616,42.0 L620,41.5 L624,39.9 L628,37.4 L632,34.1 L636,30.4 L640,26.6 L644,23.0 L648,19.9 L652,17.6 L656,16.3 L660,16.1 L664,17.0 L668,18.9 L672,21.8 L676,25.2 L680,29.0" stroke-opacity="0.55"/><path d="M0,36.7 L4,37.0 L8,36.6 L12,35.5 L16,33.9 L20,31.8 L24,29.5 L28,27.2 L32,25.0 L36,23.2 L40,21.8 L44,21.1 L48,21.1 L52,21.7 L56,23.0 L60,24.8 L64,27.0 L68,29.3 L72,31.7 L76,33.7 L80,35.4 L84,36.5 L88,37.0 L92,36.8 L96,35.9 L100,34.4 L104,32.4 L108,30.1 L112,27.8 L116,25.5 L120,23.6 L124,22.1 L128,21.2 L132,21.0 L136,21.5 L140,22.6 L144,24.3 L148,26.4 L152,28.8 L156,31.1 L160,33.3 L164,35.0 L168,36.3 L172,36.9 L176,36.9 L180,36.1 L184,34.8 L188,32.9 L192,30.7 L196,28.4 L200,26.1 L204,24.0 L208,22.4 L212,21.4 L216,21.0 L220,21.3 L224,22.3 L228,23.9 L232,25.9 L236,28.2 L240,30.5 L244,32.7 L248,34.6 L252,36.0 L256,36.8 L260,37.0 L264,36.4 L268,35.2 L272,33.4 L276,31.3 L280,28.9 L284,26.6 L288,24.5 L292,22.8 L296,21.6 L300,21.0 L304,21.2 L308,22.0 L312,23.4 L316,25.3 L320,27.6 L324,29.9 L328,32.2 L332,34.2 L336,35.8 L340,36.7 L344,37.0 L348,36.6 L352,35.5 L356,33.9 L360,31.8 L364,29.5 L368,27.2 L372,25.0 L376,23.2 L380,21.8 L384,21.1 L388,21.1 L392,21.7 L396,23.0 L400,24.8 L404,27.0 L408,29.3 L412,31.7 L416,33.7 L420,35.4 L424,36.5 L428,37.0 L432,36.8 L436,35.9 L440,34.4 L444,32.4 L448,30.1 L452,27.8 L456,25.5 L460,23.6 L464,22.1 L468,21.2 L472,21.0 L476,21.5 L480,22.6 L484,24.3 L488,26.4 L492,28.8 L496,31.1 L500,33.3 L504,35.0 L508,36.3 L512,36.9 L516,36.9 L520,36.1 L524,34.8 L528,32.9 L532,30.7 L536,28.4 L540,26.1 L544,24.0 L548,22.4 L552,21.4 L556,21.0 L560,21.3 L564,22.3 L568,23.9 L572,25.9 L576,28.2 L580,30.5 L584,32.7 L588,34.6 L592,36.0 L596,36.8 L600,37.0 L604,36.4 L608,35.2 L612,33.4 L616,31.3 L620,28.9 L624,26.6 L628,24.5 L632,22.8 L636,21.6 L640,21.0 L644,21.2 L648,22.0 L652,23.4 L656,25.3 L660,27.6 L664,29.9 L668,32.2 L672,34.2 L676,35.8 L680,36.7" stroke-opacity="0.35"/><path d="M0,40.5 L4,36.3 L8,31.5 L12,26.5 L16,21.7 L20,17.6 L24,14.4 L28,12.5 L32,12.0 L36,13.0 L40,15.4 L44,19.0 L48,23.4 L52,28.3 L56,33.3 L60,37.9 L64,41.7 L68,44.5 L72,45.9 L76,45.8 L80,44.2 L84,41.4 L88,37.4 L92,32.8 L96,27.8 L100,22.9 L104,18.5 L108,15.1 L112,12.8 L116,12.0 L120,12.6 L124,14.7 L128,18.0 L132,22.2 L136,27.1 L140,32.1 L144,36.8 L148,40.9 L152,43.9 L156,45.6 L160,45.9 L164,44.8 L168,42.2 L172,38.5 L176,34.0 L180,29.0 L184,24.1 L188,19.6 L192,15.8 L196,13.3 L200,12.1 L204,12.3 L208,14.1 L212,17.1 L216,21.1 L220,25.8 L224,30.8 L228,35.7 L232,39.9 L236,43.3 L240,45.3 L244,46.0 L248,45.2 L252,43.0 L256,39.5 L260,35.2 L264,30.3 L268,25.3 L272,20.6 L276,16.7 L280,13.8 L284,12.2 L288,12.1 L292,13.5 L296,16.2 L300,20.0 L304,24.6 L308,29.6 L312,34.5 L316,39.0 L320,42.5 L324,44.9 L328,46.0 L332,45.5 L336,43.6 L340,40.5 L344,36.3 L348,31.5 L352,26.5 L356,21.7 L360,17.6 L364,14.4 L368,12.5 L372,12.0 L376,13.0 L380,15.4 L384,19.0 L388,23.4 L392,28.3 L396,33.3 L400,37.9 L404,41.7 L408,44.5 L412,45.9 L416,45.8 L420,44.2 L424,41.4 L428,37.4 L432,32.8 L436,27.8 L440,22.9 L444,18.5 L448,15.1 L452,12.8 L456,12.0 L460,12.6 L464,14.7 L468,18.0 L472,22.2 L476,27.1 L480,32.1 L484,36.8 L488,40.9 L492,43.9 L496,45.6 L500,45.9 L504,44.8 L508,42.2 L512,38.5 L516,34.0 L520,29.0 L524,24.1 L528,19.6 L532,15.8 L536,13.3 L540,12.1 L544,12.3 L548,14.1 L552,17.1 L556,21.1 L560,25.8 L564,30.8 L568,35.7 L572,39.9 L576,43.3 L580,45.3 L584,46.0 L588,45.2 L592,43.0 L596,39.5 L600,35.2 L604,30.3 L608,25.3 L612,20.6 L616,16.7 L620,13.8 L624,12.2 L628,12.1 L632,13.5 L636,16.2 L640,20.0 L644,24.6 L648,29.6 L652,34.5 L656,39.0 L660,42.5 L664,44.9 L668,46.0 L672,45.5 L676,43.6 L680,40.5" stroke-opacity="0.2"/></svg></div>
+      <div class="tn-card-f"><span>4 SCIENCES</span><span>B4BIGBANG</span></div>
+    </div>
+  </aside>
+  <div class="tn-scroll" aria-hidden="true"><i></i>Scroll</div>
+</section>
+
+<!-- ═════ ABOUT ═════ -->
+<section class="about" id="about"><div class="wrap">
+  <div class="label rv" style="--ry:20px;--d:.6s"><span class="th">๔ ศาสตร์ของลุงหงอก · ๓</span><span class="en">Uncle Ngok’s four sciences · 03</span></div>
+  <h2 class="serif rv" style="--dl:.1s"><span class="th">พุทธศาสตร์ คือศาสตร์ที่พระพุทธเจ้าค้นพบได้ด้วยตัวพระองค์เอง และทรงประทานไว้แก่ชาวโลก เรียกว่า <em>“พระธรรม”</em></span><span class="en">Buddhist Science is the science the Buddha discovered by himself and gave to the world, called <em>the Dhamma</em>.</span></h2>
+  <p class="body rv" style="--dl:.2s"><span class="th">ผู้คนทั่วไปฝึกปฏิบัติธรรมโดยเข้าใจว่าธรรมะคือธรรมชาติ และได้ฝึกปฏิบัติกันมายาวนานถึง 2,600 ปี ทว่าผู้ที่ฝึกแล้วจะบังเกิดผลได้นั้น จำเป็นต้อง “เข้าถึง” พระธรรม</span><span class="en">People practise the Dhamma, training in the understanding that Dhamma is nature, and have done so for 2,600 years. Yet for that practice to bear fruit, one must reach the Dhamma.</span></p>
+</div></section>
+
+<!-- ═════ FEATURED · พระธรรมซ่อนซ้อนอยู่ในธรรมชาติ ═════ -->
+<section class="feat"><div class="wrap">
+  <div class="feat-box rv" style="--ry:60px;--d:.9s;--poster:url(../website_assets/images/bud_bg2_featured.jpg)">
+    <video muted loop playsinline preload="none" poster="../website_assets/images/bud_bg2_featured.jpg"><source src="../website_assets/videos/bud_bg2_featured.mp4" type="video/mp4"></video>
+    <div class="feat-ov">
+      <div class="feat-card lg"><div class="label xs"><span class="th">ซ่อนซ้อนอยู่ในธรรมชาติ</span><span class="en">Hidden within nature</span></div><p><span class="th">พระธรรมนั้นซ่อนซ้อนอยู่ในธรรมชาติ ทั้งใน<strong>ดิน</strong> ใน<strong>น้ำ</strong> ใน<strong>ลมหรืออากาศ</strong> และใน<strong>ไฟหรือความร้อน</strong> ในดินหรือของแข็งมีนิวเคลียส ซึ่ง<strong>พลังงานบริสุทธิ์</strong>อยู่ตรงกลางระหว่างโปรตอนและนิวตรอน ในน้ำก็มีนิวเคลียสที่มีพลังงานบริสุทธิ์อยู่ตรงกลางระหว่างโปรตอนและนิวตรอนเช่นกัน ในอากาศ พลังงานบริสุทธิ์ซ่อนซ้อนอยู่ในนิวเคลียสของอากาศ และในความร้อน พลังงานบริสุทธิ์ก็อยู่ตรงกลางนิวเคลียสของความร้อนเช่นเดียวกัน พลังงานบริสุทธิ์ที่ซ่อนซ้อนอยู่ในลมหรืออากาศนี้ บางคนเรียกว่า <strong>“อีเทอร์”</strong></span><span class="en">The Dhamma lies hidden, layered within nature — in <strong>earth</strong>, in <strong>water</strong>, in <strong>wind or air</strong>, and in <strong>fire or heat</strong>. Earth, or solids, has nuclei, and <strong>pure energy</strong> lies at the centre between the protons and neutrons; water too has nuclei with pure energy at the centre between protons and neutrons. In the air, pure energy lies hidden within the nuclei of the air, and in heat, pure energy likewise lies at the centre of the nuclei of heat. The pure energy hidden in the wind, or air, is what some call the <strong>ether</strong>.</span></p></div>
+      <a class="btn lg lgb" href="#words"><span class="th">อ่านต่อ</span><span class="en">Read on</span></a>
+    </div>
+  </div>
+
+  <figure class="nat-fig rv" style="--ry:50px;--d:.9s">
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMinYMid slice" role="img" aria-labelledby="natT"><title id="natT">พระธรรมซ่อนซ้อนอยู่ในดิน น้ำ ลมหรืออากาศ และไฟหรือความร้อน ซึ่งก็คือพลังงานบริสุทธิ์</title><defs><linearGradient id="natAir" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04060c"/><stop offset="1" stop-color="#16223c"/></linearGradient><linearGradient id="natWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4a74"/><stop offset="1" stop-color="#0a1c33"/></linearGradient><linearGradient id="natEarth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#352719"/><stop offset="1" stop-color="#140e08"/></linearGradient><linearGradient id="natFire" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a0b04"/><stop offset=".55" stop-color="#6e1d07"/><stop offset="1" stop-color="#c2410c"/></linearGradient><linearGradient id="natFl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd27a" stop-opacity=".9"/><stop offset=".5" stop-color="#ff7a1a" stop-opacity=".55"/><stop offset="1" stop-color="#ff3d00" stop-opacity="0"/></linearGradient><radialGradient id="natPE"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffe9b0"/><stop offset=".6" stop-color="rgba(233,201,122,.35)"/><stop offset="1" stop-color="rgba(233,201,122,0)"/></radialGradient><radialGradient id="natP" cx=".35" cy=".3"><stop offset="0" stop-color="#ffe7a8"/><stop offset=".6" stop-color="#d4952e"/><stop offset="1" stop-color="#7a4a12"/></radialGradient><radialGradient id="natN" cx=".35" cy=".3"><stop offset="0" stop-color="#eef2f7"/><stop offset=".6" stop-color="#8b95a5"/><stop offset="1" stop-color="#3c4452"/></radialGradient><radialGradient id="natCau" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="rgba(160,215,255,.35)"/><stop offset="1" stop-color="rgba(160,215,255,0)"/></radialGradient><clipPath id="natClip"><rect width="1200" height="700" rx="24"/></clipPath></defs><g clip-path="url(#natClip)"><rect width="1200" height="230" fill="url(#natAir)"/><circle cx="341" cy="46" r="1" fill="#fff" opacity="0.55"/><circle cx="59" cy="26" r="1.3" fill="#fff" opacity="0.25"/><circle cx="384" cy="157" r="0.8" fill="#fff" opacity="0.55"/><circle cx="229" cy="17" r="0.8" fill="#fff" opacity="0.4"/><circle cx="438" cy="25" r="0.8" fill="#fff" opacity="0.25"/><circle cx="574" cy="116" r="0.8" fill="#fff" opacity="0.55"/><circle cx="136" cy="65" r="1.3" fill="#fff" opacity="0.55"/><circle cx="606" cy="23" r="1.3" fill="#fff" opacity="0.55"/><circle cx="416" cy="20" r="0.8" fill="#fff" opacity="0.25"/><circle cx="580" cy="42" r="1" fill="#fff" opacity="0.4"/><circle cx="157" cy="146" r="0.8" fill="#fff" opacity="0.55"/><circle cx="325" cy="151" r="1.3" fill="#fff" opacity="0.25"/><circle cx="115" cy="156" r="1.3" fill="#fff" opacity="0.55"/><circle cx="202" cy="103" r="0.8" fill="#fff" opacity="0.55"/><circle cx="739" cy="24" r="1.3" fill="#fff" opacity="0.25"/><circle cx="643" cy="60" r="1" fill="#fff" opacity="0.55"/><circle cx="554" cy="117" r="1" fill="#fff" opacity="0.4"/><circle cx="609" cy="124" r="1" fill="#fff" opacity="0.4"/><circle cx="264" cy="54" r="1.3" fill="#fff" opacity="0.25"/><circle cx="93" cy="155" r="1" fill="#fff" opacity="0.55"/><circle cx="516" cy="95" r="1.3" fill="#fff" opacity="0.4"/><circle cx="304" cy="163" r="0.8" fill="#fff" opacity="0.25"/><circle cx="534" cy="115" r="0.8" fill="#fff" opacity="0.4"/><circle cx="165" cy="133" r="1" fill="#fff" opacity="0.25"/><circle cx="694" cy="27" r="1.3" fill="#fff" opacity="0.55"/><circle cx="818" cy="88" r="1" fill="#fff" opacity="0.55"/><circle cx="368" cy="160" r="1" fill="#fff" opacity="0.55"/><circle cx="826" cy="124" r="0.8" fill="#fff" opacity="0.25"/><circle cx="286" cy="129" r="1.3" fill="#fff" opacity="0.55"/><circle cx="76" cy="23" r="1.3" fill="#fff" opacity="0.55"/><circle cx="327" cy="173" r="1.3" fill="#fff" opacity="0.55"/><circle cx="851" cy="122" r="1" fill="#fff" opacity="0.55"/><circle cx="405" cy="179" r="1" fill="#fff" opacity="0.25"/><circle cx="482" cy="98" r="0.8" fill="#fff" opacity="0.55"/><circle cx="129" cy="134" r="0.8" fill="#fff" opacity="0.25"/><circle cx="796" cy="81" r="0.8" fill="#fff" opacity="0.55"/><circle cx="263" cy="109" r="1" fill="#fff" opacity="0.4"/><circle cx="92" cy="50" r="1" fill="#fff" opacity="0.4"/><circle cx="572" cy="79" r="0.8" fill="#fff" opacity="0.4"/><circle cx="573" cy="79" r="1.3" fill="#fff" opacity="0.4"/><circle cx="377" cy="182" r="1" fill="#fff" opacity="0.25"/><circle cx="164" cy="29" r="0.8" fill="#fff" opacity="0.25"/><circle cx="247" cy="176" r="0.8" fill="#fff" opacity="0.25"/><circle cx="506" cy="158" r="0.8" fill="#fff" opacity="0.4"/><circle cx="298" cy="9" r="0.8" fill="#fff" opacity="0.4"/><circle cx="557" cy="102" r="1.3" fill="#fff" opacity="0.55"/><g class="nat-wind" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.4" stroke-linecap="round"><path d="M40 70c90-30 160 30 250 0s160-30 250 0"/><path d="M420 132c80-24 150 24 230 0s150-24 230 0"/><path d="M640 52c70-20 130 20 200 0s130-20 200 0"/><path d="M90 170c60-16 110 16 170 0s110-16 170 0"/></g><g transform="translate(250 118) scale(0.62)"><g fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.2"><g><ellipse rx="54" ry="17"/><ellipse rx="54" ry="17" transform="rotate(60)"/><ellipse rx="54" ry="17" transform="rotate(-60)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/></g></g><circle r="15" cx="-6" fill="url(#natP)"/><circle r="15" cx="6" fill="url(#natN)"/><circle r="20" fill="url(#natPE)" class="nat-pe d2"/></g><path d="M0 214 C150 198 300 230 450 214 S750 198 900 214 S1100 230 1200 214 V372 H0Z" fill="url(#natWater)"/><g fill="url(#natCau)"><ellipse cx="160" cy="280" rx="90" ry="22"><animate attributeName="opacity" values=".3;1;.3" dur="5s" repeatCount="indefinite"/></ellipse><ellipse cx="560" cy="300" rx="120" ry="26"><animate attributeName="opacity" values="1;.3;1" dur="6s" repeatCount="indefinite"/></ellipse><ellipse cx="800" cy="270" rx="80" ry="18"><animate attributeName="opacity" values=".4;1;.4" dur="4.4s" repeatCount="indefinite"/></ellipse></g><g fill="none" stroke="rgba(170,215,255,.28)" stroke-width="1.3"><path d="M-300 246c100-12 200 12 300 0s200-12 300 0 200 12 300 0 200-12 300 0 200 12 300 0 200-12 300 0"><animateTransform attributeName="transform" type="translate" from="0 0" to="600 0" dur="14s" repeatCount="indefinite"/></path><path d="M-300 318c100-10 200 10 300 0s200-10 300 0 200 10 300 0 200-10 300 0 200 10 300 0 200-10 300 0"><animateTransform attributeName="transform" type="translate" from="600 0" to="0 0" dur="18s" repeatCount="indefinite"/></path></g><circle cx="239" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="5.4s" begin="-5.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="5.4s" begin="-5.9s" repeatCount="indefinite"/></circle><circle cx="654" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.5s" begin="-2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.5s" begin="-2.9s" repeatCount="indefinite"/></circle><circle cx="698" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="5.0s" begin="-3.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="5.0s" begin="-3.9s" repeatCount="indefinite"/></circle><circle cx="706" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="4.4s" begin="-2.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="4.4s" begin="-2.3s" repeatCount="indefinite"/></circle><circle cx="758" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.3s" begin="-2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.3s" begin="-2.9s" repeatCount="indefinite"/></circle><circle cx="212" cy="352" r="3.2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="5.3s" begin="-3.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="5.3s" begin="-3.8s" repeatCount="indefinite"/></circle><circle cx="118" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.4s" begin="-5.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.4s" begin="-5.8s" repeatCount="indefinite"/></circle><circle cx="435" cy="352" r="3.2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="5.4s" begin="-4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="5.4s" begin="-4.5s" repeatCount="indefinite"/></circle><circle cx="116" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.2s" begin="-1.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.2s" begin="-1.0s" repeatCount="indefinite"/></circle><circle cx="160" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="4.1s" begin="-3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="4.1s" begin="-3.5s" repeatCount="indefinite"/></circle><circle cx="506" cy="352" r="3.2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.4s" begin="-0.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.4s" begin="-0.9s" repeatCount="indefinite"/></circle><circle cx="640" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="6.9s" begin="-3.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="6.9s" begin="-3.9s" repeatCount="indefinite"/></circle><circle cx="388" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="4.5s" begin="-3.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="4.5s" begin="-3.3s" repeatCount="indefinite"/></circle><circle cx="51" cy="352" r="2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="4.0s" begin="-5.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="4.0s" begin="-5.8s" repeatCount="indefinite"/></circle><circle cx="695" cy="352" r="3.2" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="4.3s" begin="-4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="4.3s" begin="-4.5s" repeatCount="indefinite"/></circle><circle cx="172" cy="352" r="2.6" fill="none" stroke="rgba(190,225,255,.45)"><animate attributeName="cy" values="352;228" dur="5.3s" begin="-5.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="5.3s" begin="-5.2s" repeatCount="indefinite"/></circle><g transform="translate(640 300) scale(0.58)"><g fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.2"><g><ellipse rx="54" ry="17"/><ellipse rx="54" ry="17" transform="rotate(60)"/><ellipse rx="54" ry="17" transform="rotate(-60)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11s" repeatCount="indefinite"/></g></g><circle r="15" cx="-6" fill="url(#natP)"/><circle r="15" cx="6" fill="url(#natN)"/><circle r="20" fill="url(#natPE)" class="nat-pe d1"/></g><path d="M0 362 C200 352 360 374 560 362 S900 350 1200 364 V548 H0Z" fill="url(#natEarth)"/><g fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.1)"><path d="M60 420l50-22 46 14 10 40-60 18-44-20z"/><path d="M290 470l62-16 40 26-22 42-64 4-30-30z"/><path d="M590 410l40-10 36 22-8 32-48 8z"/><path d="M790 456l60-12 26 28-26 36-54-6-16-26z"/></g><g transform="translate(470 452) scale(0.9)"><g fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.2"><g><ellipse rx="54" ry="17"/><ellipse rx="54" ry="17" transform="rotate(60)"/><ellipse rx="54" ry="17" transform="rotate(-60)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/></g></g><circle r="15" cx="-6" fill="url(#natP)"/><circle r="15" cx="6" fill="url(#natN)"/><circle r="20" fill="url(#natPE)" class="nat-pe "/></g><path d="M0 540 C150 530 300 552 450 540 S750 528 900 542 S1100 552 1200 540 V700 H0Z" fill="url(#natFire)"/><path class="nat-fl" style="animation-delay:-0.65s;animation-duration:2.37s" d="M432 700 C432 643.3 469.6 611.8 479 574 C488.4 611.8 526 643.3 526 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.21s;animation-duration:1.6s" d="M388 700 C388 644.2 429.6 613.2 440 576 C450.4 613.2 492 644.2 492 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.55s;animation-duration:1.91s" d="M100 700 C100 664.45 134.4 644.7 143 621 C151.6 644.7 186 664.45 186 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.61s;animation-duration:1.91s" d="M504 700 C504 672.1 537.6 656.6 546 638 C554.4 656.6 588 672.1 588 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.5s;animation-duration:1.92s" d="M410 700 C410 662.65 450.0 641.9 460 617 C470.0 641.9 510 662.65 510 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.75s;animation-duration:2.33s" d="M607 700 C607 664.45 627.8 644.7 633 621 C638.2 644.7 659 664.45 659 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.85s;animation-duration:2.29s" d="M156 700 C156 646.0 180.0 616.0 186 580 C192.0 616.0 216 646.0 216 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.41s;animation-duration:1.85s" d="M594 700 C594 666.25 633.2 647.5 643 625 C652.8 647.5 692 666.25 692 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.83s;animation-duration:1.79s" d="M552 700 C552 654.55 573.6 629.3 579 599 C584.4 629.3 606 654.55 606 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.63s;animation-duration:2.07s" d="M666 700 C666 642.85 699.6 611.1 708 573 C716.4 611.1 750 642.85 750 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.86s;animation-duration:1.61s" d="M537 700 C537 667.15 569.8 648.9 578 627 C586.2 648.9 619 667.15 619 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.61s;animation-duration:1.52s" d="M556 700 C556 659.05 577.6 636.3 583 609 C588.4 636.3 610 659.05 610 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.55s;animation-duration:2.34s" d="M171 700 C171 670.75 198.2 654.5 205 635 C211.8 654.5 239 670.75 239 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-1.29s;animation-duration:1.77s" d="M771 700 C771 644.2 794.2 613.2 800 576 C805.8 613.2 829 644.2 829 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.51s;animation-duration:1.54s" d="M430 700 C430 671.65 464.4 655.9 473 637 C481.6 655.9 516 671.65 516 700Z" fill="url(#natFl)"/><path class="nat-fl" style="animation-delay:-0.94s;animation-duration:2.15s" d="M760 700 C760 647.8 782.4 618.8 788 584 C793.6 618.8 816 647.8 816 700Z" fill="url(#natFl)"/><circle cx="346" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.4s" begin="-3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.4s" begin="-3.5s" repeatCount="indefinite"/></circle><circle cx="547" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.4s" begin="-3.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.4s" begin="-3.3s" repeatCount="indefinite"/></circle><circle cx="777" cy="690" r="2.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.1s" begin="-4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="-4.5s" repeatCount="indefinite"/></circle><circle cx="818" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.4s" begin="-3.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.4s" begin="-3.4s" repeatCount="indefinite"/></circle><circle cx="592" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.0s" begin="-2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.0s" begin="-2.0s" repeatCount="indefinite"/></circle><circle cx="126" cy="690" r="2.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.2s" begin="-2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.2s" begin="-2.0s" repeatCount="indefinite"/></circle><circle cx="215" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.2s" begin="-1.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="-1.0s" repeatCount="indefinite"/></circle><circle cx="186" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.3s" begin="-3.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.3s" begin="-3.0s" repeatCount="indefinite"/></circle><circle cx="124" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.0s" begin="-0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.0s" begin="-0.8s" repeatCount="indefinite"/></circle><circle cx="123" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.4s" begin="-3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.4s" begin="-3.1s" repeatCount="indefinite"/></circle><circle cx="92" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.2s" begin="-3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.2s" begin="-3.1s" repeatCount="indefinite"/></circle><circle cx="172" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.6s" begin="-4.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.6s" begin="-4.8s" repeatCount="indefinite"/></circle><circle cx="636" cy="690" r="2.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.9s" begin="-0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.9s" begin="-0.6s" repeatCount="indefinite"/></circle><circle cx="519" cy="690" r="2.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.5s" begin="-2.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.5s" begin="-2.3s" repeatCount="indefinite"/></circle><circle cx="515" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.8s" begin="-0.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.8s" begin="-0.7s" repeatCount="indefinite"/></circle><circle cx="787" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.9s" begin="-1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.9s" begin="-1.3s" repeatCount="indefinite"/></circle><circle cx="868" cy="690" r="2.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.7s" begin="-2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="-2.6s" repeatCount="indefinite"/></circle><circle cx="230" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.4s" begin="-2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.4s" begin="-2.6s" repeatCount="indefinite"/></circle><circle cx="170" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.7s" begin="-4.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="-4.6s" repeatCount="indefinite"/></circle><circle cx="796" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.3s" begin="-4.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="-4.9s" repeatCount="indefinite"/></circle><circle cx="113" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.7s" begin="-1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="-1.3s" repeatCount="indefinite"/></circle><circle cx="395" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.3s" begin="-1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.3s" begin="-1.8s" repeatCount="indefinite"/></circle><circle cx="248" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.3s" begin="-3.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="-3.9s" repeatCount="indefinite"/></circle><circle cx="357" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="4.6s" begin="-3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.6s" begin="-3.1s" repeatCount="indefinite"/></circle><circle cx="827" cy="690" r="1.6" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="5.5s" begin="-4.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.5s" begin="-4.3s" repeatCount="indefinite"/></circle><circle cx="845" cy="690" r="2" fill="#ffb347"><animate attributeName="cy" values="690;545" dur="3.6s" begin="-2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="3.6s" begin="-2.0s" repeatCount="indefinite"/></circle><g transform="translate(180 625) scale(0.62)"><g fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.2"><g><ellipse rx="54" ry="17"/><ellipse rx="54" ry="17" transform="rotate(60)"/><ellipse rx="54" ry="17" transform="rotate(-60)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/></g></g><circle r="15" cx="-6" fill="url(#natP)"/><circle r="15" cx="6" fill="url(#natN)"/><circle r="20" fill="url(#natPE)" class="nat-pe d3"/></g><g class="nat-pts"><circle cx="140" cy="70" r="9" class="nat-pe d0"/><circle cx="420" cy="60" r="7" class="nat-pe d1"/><circle cx="560" cy="170" r="9" class="nat-pe d2"/><circle cx="780" cy="110" r="11" class="nat-pe d3"/><circle cx="110" cy="300" r="9" class="nat-pe d0"/><circle cx="380" cy="330" r="10" class="nat-pe d1"/><circle cx="820" cy="330" r="7" class="nat-pe d2"/><circle cx="200" cy="500" r="8" class="nat-pe d3"/><circle cx="700" cy="420" r="8" class="nat-pe d0"/><circle cx="860" cy="500" r="7" class="nat-pe d1"/><circle cx="420" cy="640" r="9" class="nat-pe d2"/><circle cx="680" cy="600" r="8" class="nat-pe d3"/><circle cx="840" cy="660" r="7" class="nat-pe d0"/></g><g class="nat-lab" font-family="'Noto Sans Thai',system-ui,sans-serif"><rect class="nat-panel" x="900" width="300" height="700" fill="rgba(0,0,0,.34)"/><line class="nat-panel" x1="900" y1="0" x2="900" y2="700" stroke="rgba(255,255,255,.1)"/><g transform="translate(936 82)"><text class="t1" y="0">อากาศ · ลม</text><text class="t2" y="34">พลังงานบริสุทธิ์</text><text class="t3" y="62">บางคนเรียกว่า “อีเทอร์”</text></g><g transform="translate(936 262)"><text class="t1" y="0">น้ำ · ของเหลว</text><text class="t2" y="34">พลังงานบริสุทธิ์</text><text class="t3" y="62">อยู่กลางนิวเคลียสของน้ำ</text></g><g transform="translate(936 420)"><text class="t1" y="0">ดิน · ของแข็ง</text><text class="t2" y="34">นิวเคลียส</text><text class="t3" y="62">มีพลังงานบริสุทธิ์อยู่ตรงกลาง</text></g><g transform="translate(936 590)"><text class="t1" y="0">ไฟ · ความร้อน</text><text class="t2" y="34">พลังงานบริสุทธิ์</text><text class="t3" y="62">อยู่กลางนิวเคลียสของความร้อน</text></g></g><g class="nat-lab en-svg" font-family="system-ui,sans-serif"><g transform="translate(936 82)"><text class="t1" y="0">AIR · WIND</text><text class="t2" y="34">Pure energy</text><text class="t3" y="62">some call it the ether</text></g><g transform="translate(936 262)"><text class="t1" y="0">WATER · LIQUID</text><text class="t2" y="34">Pure energy</text><text class="t3" y="62">at the centre of its nuclei</text></g><g transform="translate(936 420)"><text class="t1" y="0">EARTH · SOLID</text><text class="t2" y="34">The nucleus</text><text class="t3" y="62">with pure energy at its centre</text></g><g transform="translate(936 590)"><text class="t1" y="0">FIRE · HEAT</text><text class="t2" y="34">Pure energy</text><text class="t3" y="62">at the centre of its nuclei</text></g></g></g></svg>
+    <ul class="nat-leg"><li><b><span class="th">อากาศ · ลม</span><span class="en">Air · wind</span></b><span class="th">พลังงานบริสุทธิ์ บางคนเรียกว่า “อีเทอร์”</span><span class="en">Pure energy — some call it the ether</span></li><li><b><span class="th">น้ำ · ของเหลว</span><span class="en">Water · liquid</span></b><span class="th">พลังงานบริสุทธิ์อยู่กลางนิวเคลียสของน้ำ</span><span class="en">Pure energy at the centre of its nuclei</span></li><li><b><span class="th">ดิน · ของแข็ง</span><span class="en">Earth · solid</span></b><span class="th">นิวเคลียส มีพลังงานบริสุทธิ์อยู่ตรงกลาง</span><span class="en">The nucleus, with pure energy at its centre</span></li><li><b><span class="th">ไฟ · ความร้อน</span><span class="en">Fire · heat</span></b><span class="th">พลังงานบริสุทธิ์อยู่กลางนิวเคลียสของความร้อน</span><span class="en">Pure energy at the centre of its nuclei</span></li></ul>
+    <figcaption><span class="nat-dot"></span><span class="th">จุดสว่าง คือพลังงานบริสุทธิ์ที่ซ่อนซ้อนอยู่ในดิน น้ำ อากาศ และความร้อน</span><span class="en">The points of light are the pure energy hidden in earth, water, air and heat</span></figcaption>
+  </figure>
+</div></section>
+
+<!-- ═════ พุทธพจน์ ═════ -->
+<section class="qsec" id="words">
+  <p class="lead rv" style="--ry:20px"><span class="th">ลุงหงอกได้กล่าวไว้ว่า</span><span class="en">Uncle Ngok has said</span> <span class="th">ต้องเป็นผู้ที่ “เข้าถึง” เท่านั้นจึงจะได้ผล และได้ยกพุทธพจน์ไว้ว่า</span><span class="en">only one who reaches it will succeed, and he cites the Buddha’s words:</span></p>
+  <blockquote class="serif rv" style="--dl:.1s"><span class="th">“ผู้ใดเห็นธรรม<br>ผู้นั้นเห็นเราตถาคต”</span><span class="en">“Whoever sees the Dhamma<br>sees me, the Tathāgata.”</span></blockquote>
+  <p class="after rv" style="--dl:.2s"><span class="th">หมายความว่า ผู้ใดเห็นธรรมชาติ ผู้นั้นย่อมเห็นพระพุทธเจ้า ธรรมชาติประกอบด้วยของแข็ง ของเหลว และอากาศ ดังนั้น ผู้ใดก็ตามที่มองเห็นอากาศ ผู้นั้นย่อมมองเห็นพระพุทธเจ้า</span><span class="en">That is: whoever sees nature sees the Buddha. Nature is made of solids, liquids and air — so whoever can see the air sees the Buddha.</span></p>
+</section>
+
+<!-- ═════ PHILOSOPHY · เห็น × เข้าถึง ═════ -->
+<section class="phil" id="reach"><div class="wrap">
+  <h2 class="serif rv"><span class="th">เห็น <em>×</em> เข้าถึง</span><span class="en">Seeing <em>×</em> Reaching</span></h2>
+  <div class="grid2">
+    <div class="phil-v rv" style="--rx:-40px;--ry:0;--poster:url(../website_assets/images/bud_bg3_philosophy.jpg)"><img class="kb-s" src="../website_assets/images/bud_bg3_philosophy.jpg" alt="คลองยามโพล้เพล้ คนบนฝั่งหนึ่งมองไปยังคนบนอีกฝั่ง" loading="lazy" decoding="async"></div>
+    <div class="phil-t rv" style="--rx:40px;--ry:0">
+      <div class="blk"><div class="label xs" style="margin-bottom:16px"><span class="th">เข้าถึง</span><span class="en">Reaching</span></div><p><span class="th">ส่วนคำว่า “เข้าถึง” นั้น ผู้ใดเข้าถึงพระธรรมที่ซ่อนซ้อนอยู่ในอากาศ ซึ่งก็คือพลังงานบริสุทธิ์ ผู้นั้นจะได้สัมผัสถึงตัวตน และเข้าถึงพระพุทธเจ้าอย่างแท้จริง คำว่า <strong>“เห็น”</strong> กับคำว่า <strong>“เข้าถึง”</strong> จึงแตกต่างกัน</span><span class="en">As for reaching: whoever reaches the Dhamma hidden in the air — which is pure energy — will touch its very presence and truly reach the Buddha. <strong>Seeing</strong> and <strong>reaching</strong> are therefore not the same.</span></p></div>
+      <hr>
+      <div class="blk"><div class="label xs" style="margin-bottom:16px"><span class="th">ลุงหงอกได้เปรียบเปรยไว้ว่า</span><span class="en">Uncle Ngok’s comparison</span></div><p><span class="th">หากมีคลองสายหนึ่งกั้นอยู่ ผู้ที่ “เห็น” คือผู้ที่มองเห็นคนซึ่งอยู่ฝั่งตรงข้าม ส่วนผู้ที่ “เข้าถึง” คือผู้ที่กระโดดข้ามไปยังอีกฝั่งหนึ่งได้จริง และสามารถโอบกอดพระพุทธเจ้า เป็นอันหนึ่งอันเดียวกับพระพุทธเจ้าได้ นั่นคือ “การเข้าถึง”</span><span class="en">where a canal lies between two banks, one who sees sees the person standing on the far side; one who reaches actually leaps across to the other bank, and can embrace the Buddha, becoming one with the Buddha. That is reaching.</span></p><p><span class="th">ดุจการข้ามฝั่งข้ามห้วย หรือดุจการเกาะพระไตรปิฎกไว้ เมื่อข้ามไปถึงอีกฝั่งหนึ่งแล้ว จึงสามารถละและวางพระไตรปิฎกได้ เพราะพระไตรปิฎกคือ<strong>รูป</strong> และรูปคือสสาร เมื่อจิตบริสุทธิ์แล้ว จึงละเลยคำว่ารูปไปแล้ว จิตบริสุทธิ์จะไปถึงคำว่า<strong>นาม</strong> การละวางพระไตรปิฎกจึงเปรียบเสมือนการทิ้งรูปนั่นเอง</span><span class="en">It is like crossing a river or a stream, holding on to the Tipiṭaka: once across on the far bank, one can let the Tipiṭaka go and lay it down. For the Tipiṭaka is <strong>form</strong>, and form is matter. When the mind is pure it has passed beyond form, and the pure mind arrives at <strong>name</strong> (nāma). Laying down the Tipiṭaka is therefore like leaving form behind.</span></p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═════ SERVICES · สองฝั่งคลอง ═════ -->
+<section class="serv"><div class="wrap">
+  <div class="serv-h rv" style="--ry:30px;--d:.7s"><h2 class="serif"><span class="th">ข้าม<em>ฝั่ง</em></span><span class="en">Crossing <em>over</em></span></h2><span><span class="th">เห็น · เข้าถึง</span><span class="en">Seeing · Reaching</span></span></div>
+  <div class="cards">
+    <article class="card lg rv" style="--ry:50px"><div class="card-v" style="--poster:url(../website_assets/images/bud_bg4_card1.jpg)"><img class="kb-s" src="../website_assets/images/bud_bg4_card1.jpg" alt="คนยืนริมฝั่งมองข้ามน้ำไปยังอีกฝั่ง" loading="lazy" decoding="async"></div>
+      <div class="card-b"><div class="card-top"><span class="label xs"><span class="th">เห็น</span><span class="en">Seeing</span></span><span class="ar lg"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span></div>
+        <h3 class="serif"><span class="th">มองเห็นคนซึ่งอยู่ฝั่งตรงข้าม</span><span class="en">Sees the person on the far bank</span></h3></div></article>
+    <article class="card lg rv" style="--ry:50px;--dl:.15s"><div class="card-v" style="--poster:url(../website_assets/images/bud_bg5_card2.jpg)"><img class="kb-s" src="../website_assets/images/bud_bg5_card2.jpg" alt="คนกระโดดข้ามลำธาร คัมภีร์ใบลานลอยไปตามน้ำ" loading="lazy" decoding="async"></div>
+      <div class="card-b"><div class="card-top"><span class="label xs"><span class="th">เข้าถึง</span><span class="en">Reaching</span></span><span class="ar lg"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span></div>
+        <h3 class="serif"><span class="th">กระโดดข้ามไปยังอีกฝั่งหนึ่งได้จริง</span><span class="en">Actually leaps across to the other bank</span></h3></div></article>
+  </div>
+</div></section>
+
+<!-- ═════ ตารางการเข้าถึง · พุทธศาสตร์ × จิตศาสตร์ ═════ -->
+<section class="acc acc-bud" id="access"><div class="wrap">
+  <div class="label rv" style="--ry:20px"><span class="th">พุทธศาสตร์ <em>×</em> จิตศาสตร์</span><span class="en">Buddhist Science <em>×</em> Mind Science</span></div>
+  <h2 class="serif rv" style="--dl:.05s"><span class="th">ระดับใน<em>การเข้าถึง</em></span><span class="en">Levels of <em>reaching</em></span></h2>
+  <p class="acc-lead rv" style="--dl:.1s"><span class="th">พระธรรมเป็นศาสตร์ที่พระพุทธเจ้าทรงประทานไว้แก่ชาวโลก การเข้าถึงพระธรรมมีหลายระดับ คิดเป็นเปอร์เซ็นต์ตามขั้นของพระอริยบุคคล ธรรมจักรจะค่อย ๆ เติมเต็มทีละส่วน และแต่ละขั้นเชื่อมโยงกับระดับของจิต หรือ<strong>ฌาน</strong> ในจิตศาสตร์</span><span class="en">The Dhamma is the science the Buddha gave to the world. Reaching it has levels, counted in percent by the stages of the noble ones: the Dhamma wheel fills part by part, and each stage is linked to a level of mind — a <strong>jhāna</strong> — in Mind Science.</span></p>
+  <ol class="acc-list">
+    <li class="acc-row lg rv" style="--ry:40px;--dl:0.00s">
+      <div class="acc-wc"><svg class="acc-w" viewBox="0 0 100 100" aria-hidden="true" style="--p:25"><defs><mask id="accmbud0" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><circle class="acc-sweep" cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="52" pathLength="100" transform="rotate(-90 50 50)"/></mask></defs><g class="acc-dim" fill="none" stroke="currentColor"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g><g class="acc-gold" fill="none" stroke="currentColor" mask="url(#accmbud0)"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g></svg><b class="acc-pct">25%</b></div>
+      <div class="acc-a"><small class="acc-k"><span class="th">พุทธศาสตร์ · ขั้นที่ 1</span><span class="en">Buddhist Science · stage 1</span></small><h3 class="serif"><span class="th">พระโสดาบัน</span><span class="en">Sotāpanna</span></h3>
+        <p><span class="th">เข้าถึงพระธรรม 25%</span><span class="en">reaches 25% of the Dhamma</span></p><p class="acc-el"><span class="th">บรรลุธาตุดิน</span><span class="en">attains the earth element</span></p></div>
+      <div class="acc-j"><small class="acc-k"><span class="th">จิตศาสตร์ · ระดับของจิต</span><span class="en">Mind Science · level of mind</span></small><h4><span class="th">ปฐมฌาน <small>(ฌาน 1)</small></span><span class="en">First jhāna</span></h4><p><span class="th">มีองค์ประกอบ 5 อย่าง คือ วิตก (ตรึก) วิจาร (ตรอง) ปีติ (อิ่มใจ) สุข (สบายใจ) และเอกัคคตา (มีอารมณ์เป็นหนึ่ง)</span><span class="en">Five factors: applied thought, sustained thought, rapture, happiness and one-pointedness.</span></p></div>
+      <div class="acc-e"><small class="acc-k"><span class="th">มีพลังงานบริสุทธิ์ในตัว</span><span class="en">Pure energy within</span></small><b class="serif">25<i>%<span class="th"> ขึ้นไป</span><span class="en">+</span></i></b><span class="acc-bar"><i style="--v:25"></i></span></div>
+    </li>
+    <li class="acc-row lg rv" style="--ry:40px;--dl:0.08s">
+      <div class="acc-wc"><svg class="acc-w" viewBox="0 0 100 100" aria-hidden="true" style="--p:50"><defs><mask id="accmbud1" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><circle class="acc-sweep" cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="52" pathLength="100" transform="rotate(-90 50 50)"/></mask></defs><g class="acc-dim" fill="none" stroke="currentColor"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g><g class="acc-gold" fill="none" stroke="currentColor" mask="url(#accmbud1)"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g></svg><b class="acc-pct">50%</b></div>
+      <div class="acc-a"><small class="acc-k"><span class="th">พุทธศาสตร์ · ขั้นที่ 2</span><span class="en">Buddhist Science · stage 2</span></small><h3 class="serif"><span class="th">พระสกิทาคามี</span><span class="en">Sakadāgāmī</span></h3>
+        <p><span class="th">เข้าถึงพระธรรม 50%</span><span class="en">reaches 50% of the Dhamma</span></p><p class="acc-el"><span class="th">บรรลุธาตุน้ำ</span><span class="en">attains the water element</span></p></div>
+      <div class="acc-j"><small class="acc-k"><span class="th">จิตศาสตร์ · ระดับของจิต</span><span class="en">Mind Science · level of mind</span></small><h4><span class="th">ทุติยฌาน <small>(ฌาน 2)</small></span><span class="en">Second jhāna</span></h4><p><span class="th">ละวิตกและวิจารได้ มีองค์ประกอบ 3 อย่าง คือ ปีติ สุข และเอกัคคตา จิตใจชุ่มชื่น ลมหายใจเบาลง</span><span class="en">Thought falls away, leaving three factors: rapture, happiness and one-pointedness. The mind is refreshed; the breath grows light.</span></p></div>
+      <div class="acc-e"><small class="acc-k"><span class="th">มีพลังงานบริสุทธิ์ในตัว</span><span class="en">Pure energy within</span></small><b class="serif">50<i>%<span class="th"> ขึ้นไป</span><span class="en">+</span></i></b><span class="acc-bar"><i style="--v:50"></i></span></div>
+    </li>
+    <li class="acc-row lg rv" style="--ry:40px;--dl:0.16s">
+      <div class="acc-wc"><svg class="acc-w" viewBox="0 0 100 100" aria-hidden="true" style="--p:75"><defs><mask id="accmbud2" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><circle class="acc-sweep" cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="52" pathLength="100" transform="rotate(-90 50 50)"/></mask></defs><g class="acc-dim" fill="none" stroke="currentColor"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g><g class="acc-gold" fill="none" stroke="currentColor" mask="url(#accmbud2)"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g></svg><b class="acc-pct">75%</b></div>
+      <div class="acc-a"><small class="acc-k"><span class="th">พุทธศาสตร์ · ขั้นที่ 3</span><span class="en">Buddhist Science · stage 3</span></small><h3 class="serif"><span class="th">พระอนาคามี</span><span class="en">Anāgāmī</span></h3>
+        <p><span class="th">เข้าถึงพระธรรม 75%</span><span class="en">reaches 75% of the Dhamma</span></p><p class="acc-el"><span class="th">บรรลุธาตุลม</span><span class="en">attains the wind element</span></p></div>
+      <div class="acc-j"><small class="acc-k"><span class="th">จิตศาสตร์ · ระดับของจิต</span><span class="en">Mind Science · level of mind</span></small><h4><span class="th">ตติยฌาน <small>(ฌาน 3)</small></span><span class="en">Third jhāna</span></h4><p><span class="th">ละปีติได้ มีองค์ประกอบ 2 อย่าง คือ สุข และเอกัคคตา เหลือแต่ความสุขเยือกเย็น จิตทรงตัวแน่นสนิท</span><span class="en">Rapture falls away, leaving two factors: happiness and one-pointedness — a cool, calm happiness; the mind stands firm.</span></p></div>
+      <div class="acc-e"><small class="acc-k"><span class="th">มีพลังงานบริสุทธิ์ในตัว</span><span class="en">Pure energy within</span></small><b class="serif">75<i>%<span class="th"> ขึ้นไป</span><span class="en">+</span></i></b><span class="acc-bar"><i style="--v:75"></i></span></div>
+    </li>
+    <li class="acc-row lg rv" style="--ry:40px;--dl:0.24s">
+      <div class="acc-wc"><svg class="acc-w" viewBox="0 0 100 100" aria-hidden="true" style="--p:100"><defs><mask id="accmbud3" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><circle class="acc-sweep" cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="52" pathLength="100" transform="rotate(-90 50 50)"/></mask></defs><g class="acc-dim" fill="none" stroke="currentColor"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g><g class="acc-gold" fill="none" stroke="currentColor" mask="url(#accmbud3)"><circle cx="50" cy="50" r="40" stroke-width="5"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/><circle cx="50" cy="50" r="7" stroke-width="2.4"/><line x1="50" y1="50" x2="83.00" y2="50.00"/><line x1="50" y1="50" x2="73.33" y2="73.33"/><line x1="50" y1="50" x2="50.00" y2="83.00"/><line x1="50" y1="50" x2="26.67" y2="73.33"/><line x1="50" y1="50" x2="17.00" y2="50.00"/><line x1="50" y1="50" x2="26.67" y2="26.67"/><line x1="50" y1="50" x2="50.00" y2="17.00"/><line x1="50" y1="50" x2="73.33" y2="26.67"/></g></svg><b class="acc-pct">100%</b></div>
+      <div class="acc-a"><small class="acc-k"><span class="th">พุทธศาสตร์ · ขั้นที่ 4</span><span class="en">Buddhist Science · stage 4</span></small><h3 class="serif"><span class="th">พระอรหันต์</span><span class="en">Arahant</span></h3>
+        <p><span class="th">เข้าถึงพระธรรม 100%</span><span class="en">reaches 100% of the Dhamma</span></p><p class="acc-el"><span class="th">บรรลุธาตุไฟ และทั้ง 3 ธาตุ</span><span class="en">attains the fire element, and all three</span></p></div>
+      <div class="acc-j"><small class="acc-k"><span class="th">จิตศาสตร์ · ระดับของจิต</span><span class="en">Mind Science · level of mind</span></small><h4><span class="th">จตุตถฌาน <small>(ฌาน 4)</small></span><span class="en">Fourth jhāna</span></h4><p><span class="th">ละสุขได้ มีองค์ประกอบ 2 อย่าง คือ อุเบกขา (ความรู้สึกเฉย ๆ เป็นกลาง) และเอกัคคตา ลมหายใจระงับ เหลือแต่สติและอุเบกขาที่บริบูรณ์</span><span class="en">Happiness falls away, leaving equanimity and one-pointedness. The breath is stilled; only mindfulness and complete equanimity remain.</span></p></div>
+      <div class="acc-e"><small class="acc-k"><span class="th">มีพลังงานบริสุทธิ์ในตัว</span><span class="en">Pure energy within</span></small><b class="serif">100<i>%</i></b><span class="acc-bar"><i style="--v:100"></i></span></div>
+    </li>
+  </ol>
+  <a class="acc-link rv" href="lunghgnok_mind.html#jhana"><span class="th">ดูระดับของจิต (ฌาน) ในจิตศาสตร์</span><span class="en">See the levels of mind (jhāna) in Mind Science</span> <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></a>
+</div></section>
+
+<!-- ═════ closing ═════ -->
+<section class="close">
+  <h2 class="serif rv"><span class="th">ลุงหงอกได้กล่าวไว้ว่า ท่านใช้ศาสตร์ทั้งสี่นี้ในเวลาเดียวกัน</span><span class="en">Uncle Ngok has said that he uses all four sciences at the same time.</span></h2>
+  <div class="fours rv" style="--dl:.1s"><a class="lg kia-four" href="lunghgnok_dhamma.html"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36c-5-4-7-9-7-14 0-5 3-9 7-13 4 4 7 8 7 13 0 5-2 10-7 14z"></path><path d="M24 36c-6 0-12-3-15-9 4-2 8-2 11 0"></path><path d="M24 36c6 0 12-3 15-9-4-2-8-2-11 0"></path><path d="M8 38h32"></path></svg></span><span><b><span class="th">ธรรมศาสตร์</span><span class="en">Dhamma Science</span></b><small><span class="th">ธรรมชาติ</span><span class="en">Nature</span></small></span></a><a class="lg kia-four" href="lunghgnok_mind.html"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="3.2" class="f"></circle><circle cx="24" cy="24" r="9"></circle><circle cx="24" cy="24" r="15" opacity=".7"></circle><circle cx="24" cy="24" r="20.5" opacity=".4"></circle></svg></span><span><b><span class="th">จิตศาสตร์</span><span class="en">Mind Science</span></b><small><span class="th">พลังงานบริสุทธิ์</span><span class="en">Pure energy</span></small></span></a><a class="lg kia-four on" aria-current="page" href="lunghgnok_buddhism.html"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5v7"></path><path d="M21 12h6l-1 5h-4z"></path><path d="M15 27c0-6 4-10 9-10s9 4 9 10z"></path><path d="M12 27h24v4H12z"></path><path d="M9 31h30v5H9z"></path><path d="M6 36h36v5H6z"></path></svg></span><span><b><span class="th">พุทธศาสตร์</span><span class="en">Buddhist Science</span></b><small><span class="th">ศาสนาศาสตร์</span><span class="en">Religious science</span></small></span></a><a class="lg kia-four" href="lunghgnok_science.html"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="2.8" class="f"></circle><ellipse cx="24" cy="24" rx="19" ry="7"></ellipse><ellipse cx="24" cy="24" rx="19" ry="7" transform="rotate(60 24 24)"></ellipse><ellipse cx="24" cy="24" rx="19" ry="7" transform="rotate(-60 24 24)"></ellipse></svg></span><span><b><span class="th">วิทยาศาสตร์</span><span class="en">Science</span></b><small><span class="th">พลังงานทั้ง 6 สาขา</span><span class="en">The six branches of energy</span></small></span></a></div>
+  <a class="next lg rv" style="--dl:.2s" href="lunghgnok_science.html"><span class="th">ศาสตร์ถัดไป · วิทยาศาสตร์</span><span class="en">Next · Science</span><span class="go"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+</section>
+
+<script>
+(function(){
+  const B=document.body;
+  // language
+  document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{const l=b.dataset.l;B.classList.toggle('lang-en',l==='en');B.classList.toggle('lang-th',l==='th');document.documentElement.lang=l;
+    document.querySelectorAll('.lang button').forEach(x=>x.classList.toggle('on',x===b));}));
+  // reveal once (useInView once, margin -100px)
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -100px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // section videos play only while on screen
+  const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){const p=v.play();if(p&&p.catch)p.catch(()=>{});}else v.pause();}),{rootMargin:'400px 0px',threshold:0});
+  document.querySelectorAll('section:not(.hero) video').forEach(v=>vio.observe(v));
+  // hero video: fade in on canplay, fade to black just before the end, restart (seamless crossfade loop)
+  const v=document.getElementById('heroV')||document.createElement('video'); let raf=0, fading=false;
+  function fade(to,ms){cancelAnimationFrame(raf);const from=parseFloat(v.style.opacity||0),t0=performance.now();
+    (function step(t){const k=Math.min(1,(t-t0)/ms);v.style.opacity=from+(to-from)*k;if(k<1)raf=requestAnimationFrame(step);})(t0);}
+  v.addEventListener('canplay',()=>{if(v.dataset.ok)return;v.dataset.ok=1;const p=v.play();if(p&&p.catch)p.catch(()=>{});fade(1,500);});
+  v.addEventListener('timeupdate',()=>{if(!fading&&v.duration&&v.duration-v.currentTime<=.55){fading=true;fade(0,500);}});
+  v.addEventListener('ended',()=>{cancelAnimationFrame(raf);v.style.opacity=0;setTimeout(()=>{v.currentTime=0;const p=v.play();if(p&&p.catch)p.catch(()=>{});fading=false;fade(1,500);},100);});
+  if(v.readyState>=3) v.dispatchEvent(new Event('canplay'));
+})();
+</script>
+<script>
+/* golden fireflies drifting up over the hero still (echoes the lights around the statue) */
+(function(){
+  const c=document.querySelector('.hero .motes'); if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const x=c.getContext('2d'); let W=0,H=0,m=[],on=true;
+  function size(){const d=Math.min(devicePixelRatio||1,1.5);W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+    m=Array.from({length:Math.round(Math.min(70,W/18))},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:6+Math.random()*16,s:Math.random()*6.3,a:.25+Math.random()*.6}));}
+  let last=0; function f(t){requestAnimationFrame(f); if(!on||document.hidden){last=t;return;} const dt=Math.min(.05,(t-last)/1000||0); last=t; x.clearRect(0,0,W,H);
+    for(const p of m){p.y-=p.v*dt;p.x+=Math.sin(t/1600+p.s)*.25;if(p.y<-8){p.y=H+8;p.x=Math.random()*W;}
+      const tw=.55+.45*Math.sin(t/700+p.s); x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle='rgba(255,206,120,'+(p.a*tw).toFixed(3)+')';x.shadowColor='rgba(255,190,90,.9)';x.shadowBlur=8;x.fill();}}
+  size(); addEventListener('resize',size); new IntersectionObserver(e=>{on=e[0].isIntersecting;}).observe(c); requestAnimationFrame(f);
+})();
+</script>
+
+
+<script>
+/* Terranova glass card: redraw the hero footage under the card (~25 fps) and refract it with the SVG filter */
+(function(){
+  const card=document.getElementById('tnCard'); if(!card) return;
+  const cv=document.getElementById('tnRefr'), ctx=cv.getContext('2d'), mapEl=document.getElementById('tnMap');
+  const media=document.querySelector('.hero .hero-v'); if(!media){card.classList.add('nofx');return;}
+  const poster=new Image(); const ps=media.getAttribute('poster'); if(ps) poster.src=ps;
+  const OS=40; let vis=true,last=0,over=false;
+  card.addEventListener('pointerenter',()=>over=true); card.addEventListener('pointerleave',()=>over=false);
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;}).observe(card);
+  function hash(x,y,s){let h=(x*374761393+y*668265263+s*982451653)|0;h=(h^(h>>>13))*1274126177|0;return((h^(h>>>16))>>>0)/4294967295;}
+  function vnoise(x,y,s){const xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf);
+    const a=hash(xi,yi,s),b=hash(xi+1,yi,s),c=hash(xi,yi+1,s),d=hash(xi+1,yi+1,s);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v;}
+  function fbm(x,y,s){let t=0,amp=.5,f=1,n=0;for(let o=0;o<3;o++){t+=amp*vnoise(x*.012*f,y*.015*f,s+o);n+=amp;amp*=.5;f*=2;}return t/n;}
+  function erfc(x){const z=Math.abs(x),t=1/(1+.5*z),r=t*Math.exp(-z*z-1.26551223+t*(1.00002368+t*(.37409196+t*(.09678418+t*(-.18628806+t*(.27886807+t*(-1.13520398+t*(1.48851587+t*(-.82215223+t*.17087277)))))))));return x>=0?r:2-r;}
+  let mapKey='';
+  function buildMap(W,H){const key=W+'x'+H; if(key===mapKey)return; mapKey=key;
+    const R=parseFloat(getComputedStyle(card).borderTopLeftRadius)||48,x0=OS,y0=OS,x1=W-OS,y1=H-OS;
+    const m=document.createElement('canvas');m.width=W;m.height=H;const mc=m.getContext('2d'),img=mc.createImageData(W,H),D=img.data;
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){const qx=Math.max(x0+R-x,x-(x1-R),0),qy=Math.max(y0+R-y,y-(y1-R),0);
+      let d; if(qx>0&&qy>0)d=R-Math.hypot(qx,qy); else d=Math.min(x-x0,x1-x,y-y0,y1-y);
+      const a=1-.5*erfc(d/(45*Math.SQRT2)),e=Math.min(1,Math.max(0,1-1.3*a)),i=(y*W+x)*4;
+      D[i]=255*(.5+(fbm(x,y,1)-.5)*e*1.6);D[i+1]=255*(.5+(fbm(x,y,7)-.5)*e*1.6);D[i+2]=128;D[i+3]=255;}
+    mc.putImageData(img,0,0); const u=m.toDataURL();
+    mapEl.setAttribute('width',W);mapEl.setAttribute('height',H);mapEl.setAttribute('href',u);mapEl.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href',u);
+    card.classList.add('fx');}
+  function size(){const r=card.getBoundingClientRect(),W=Math.round(r.width+OS*2),H=Math.round(r.height+OS*2);if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}buildMap(W,H);}
+  function draw(t){requestAnimationFrame(draw); if(!vis||document.hidden||t-last<(over?80:40))return; last=t;
+    const r=card.getBoundingClientRect(); if(Math.abs(cv.width-(r.width+OS*2))>1||Math.abs(cv.height-(r.height+OS*2))>1)size();
+    let src=null; if(media.tagName==='VIDEO'){ if(media.readyState>=2) src=media; else if(poster.complete&&poster.naturalWidth) src=poster; } else if(media.complete&&media.naturalWidth) src=media;
+    ctx.fillStyle='#05070c'; ctx.fillRect(0,0,cv.width,cv.height); if(!src) return;
+    const sw=src.videoWidth||src.naturalWidth, sh=src.videoHeight||src.naturalHeight, m=media.getBoundingClientRect();
+    const op=getComputedStyle(media).objectPosition.split(' ').map(v=>parseFloat(v)/100); const px=isNaN(op[0])?.5:op[0], py=isNaN(op[1])?.5:op[1];
+    const s=Math.max(m.width/sw,m.height/sh), dw=sw*s, dh=sh*s;
+    const dx=m.left+(m.width-dw)*px-(r.left-OS), dy=m.top+(m.height-dh)*py-(r.top-OS);
+    ctx.globalAlpha=media.tagName==='VIDEO'?Math.max(.15,parseFloat(media.style.opacity||1)):1;
+    try{ctx.drawImage(src,dx,dy,dw,dh);}catch(e){card.classList.add('nofx');} ctx.globalAlpha=1;}
+  let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(size,150);});
+  requestAnimationFrame(()=>{size();requestAnimationFrame(draw);});
+})();
+</script>
+<script>
+/* main-site menu: language buttons look like the site's, ☰ drawer on phones, solid bar after scrolling */
+(function(){
+  var nav=document.getElementById('siteNav'), menu=document.getElementById('navMenu'), tg=document.getElementById('menuToggle');
+  document.querySelectorAll('.navbar .lang-btn').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.navbar .lang-btn').forEach(function(x){x.classList.toggle('active',x===b);});});});
+  if(tg) tg.addEventListener('click',function(){var o=menu.classList.toggle('open');nav.classList.toggle('open-menu',o);tg.setAttribute('aria-expanded',o);});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');nav.classList.remove('open-menu');});});
+  function sc(){nav.classList.toggle('solid',scrollY>40);} addEventListener('scroll',sc,{passive:true}); sc();
+})();
+</script>
+<script>
+/* language hand-off between index.html and the four science pages */
+(function(){
+  var B=document.body, q=new URLSearchParams(location.search).get('lang');
+  if(q==='en'||q==='th'){var b=document.querySelector('.lang button[data-l="'+q+'"]'); if(b) b.click();}
+  var links=[].slice.call(document.querySelectorAll('a[href]')).filter(function(a){return /^(\.\.\/)?lunghgnok_[a-z]+\.html(#|$)/.test(a.getAttribute('href'));});
+  links.forEach(function(a){a.dataset.base=a.getAttribute('href');});
+  function upd(){var l=B.classList.contains('lang-en')?'en':'th';
+    links.forEach(function(a){var h=a.dataset.base,i=h.indexOf('#');a.setAttribute('href',(i<0?h:h.slice(0,i))+'?lang='+l+(i<0?'':h.slice(i)));});}
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setTimeout(upd,0);});});
+  upd();
+})();
+</script>
+</body>
+</html>
